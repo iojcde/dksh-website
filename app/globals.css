@@ -24,75 +24,11 @@
      
   }
   body {
-    @apply overflow-x-clip bg-white dark:bg-black text-foreground selection:bg-violet-400/30;
-  }
-
-  .font-display {
-    font-variation-settings: "opsz" 28;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-display;
-  }
-}
-
-.gradient {
-  z-index: -1;
-  width: 100vw;
-  min-width: 1500px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(
-      circle 800px at 700px 200px,
-      hsl(var(--purple2)),
-      var(--transparent)
-    ),
-    radial-gradient(
-      circle 600px at calc(100% - 300px) 300px,
-      hsl(var(--mint2)),
-      var(--transparent)
-    ),
-    radial-gradient(
-      circle 800px at right center,
-      hsl(var(--sky3)),
-      var(--transparent)
-    ),
-    radial-gradient(
-      circle 800px at right bottom,
-      hsl(var(--sky1)),
-      var(--transparent)
-    ),
-    radial-gradient(
-      circle 800px at calc(50% - 600px) calc(100% - 100px),
-      hsl(var(--violet3)),
-      hsl(var(--violet1)),
-      var(--transparent)
-    );
-  --transparent: #fdfcfd00;
+    @apply overflow-x-clip bg-white dark:bg-black text-foreground selection:bg-dksh-400/30;
+  } 
+ 
 }
  
-
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-.tippy-box[data-animation='fade'][data-state='hidden'] {
-  opacity: 0; 
-}
-
-
-.tippy-box[data-animation='fade'][data-state='visible'] {
-  opacity: 100;
-}
 
 p a {
   @apply underline underline-offset-2;
