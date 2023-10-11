@@ -20,7 +20,7 @@ export default async function Home() {
               단대소고
             </h1>
             <p className="mt-4 max-w-[32ch] text-gray-300 md:text-xl">
-              단대소고는 어쩌고 저쩌고 소프트웨어 고등학교입니다.
+              단대소고는 수도권 유일 소프트웨어 고등학교입니다.
             </p>
             <div className="mt-8 flex items-center gap-2">
               <Link
