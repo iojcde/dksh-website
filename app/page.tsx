@@ -18,7 +18,7 @@ export default async function Home() {
                 단대소고
               </h1>
               <p className="mt-4 max-w-[32ch] text-gray-3 md:text-xl">
-                단대소고는 어쩌고 저쩌고 소프트웨어 고등학교입니다.
+                단대소고는 수도권 유일 소프트웨어 고등학교입니다.
               </p>
               <Link
                 href="/login"
@@ -45,7 +45,7 @@ export default async function Home() {
                 src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </div>
