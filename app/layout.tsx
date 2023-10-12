@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -20,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={pretendard.className}>{children}</body>
+      <body className={pretendard.className}>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

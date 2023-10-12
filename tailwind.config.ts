@@ -3,7 +3,7 @@ const colors = createPlugin();
 const alias = colors.alias;
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     container: {
@@ -15,8 +15,10 @@ const config = {
       },
     },
     extend: {
-      colors: {
+      colors: () => ({
         dksh: {
+          50: "hsl(208, 95%, 70%)",
+          100: "hsl(208, 95%, 60%)",
           200: "hsl(208, 95%, 50%)",
           300: "hsl(208, 95%, 45%)",
           400: "hsl(208, 95%, 40%)",
@@ -59,7 +61,7 @@ const config = {
           DEFAULT: alias("gray", 1),
           foreground: alias("gray", 12),
         },
-      },
+      }),
       borderRadius: {
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,

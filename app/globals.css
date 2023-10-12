@@ -24,7 +24,7 @@
      
   }
   body {
-    @apply overflow-x-clip bg-white dark:bg-black text-foreground selection:bg-dksh-400/30;
+    @apply overflow-x-clip bg-white dark:bg-black  selection:bg-dksh-200/30;
   } 
  
 }
