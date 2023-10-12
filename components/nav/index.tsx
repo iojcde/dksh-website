@@ -25,7 +25,7 @@ const Nav = () => {
   return (
     <nav
       id="nav"
-      className="py-4 px-6 transition duration-300 fixed lg:px-12 w-full flex z-[100] justify-between  items-center"
+      className="py-4 px-6 transition  fixed lg:px-12 w-full flex z-[100] justify-between  items-center"
     >
       <Link href="/" className="font-bold text-2xl tracking-tight">
         DKSH

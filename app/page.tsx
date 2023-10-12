@@ -32,7 +32,7 @@ export default async function Home() {
               </Link>
 
               <Link
-                href="/login"
+                href="https://gall.dcinside.com/mgallery/board/lists/?id=dksw"
                 className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-6 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
               >
                 재학생 포털
@@ -69,7 +69,7 @@ export default async function Home() {
       <div className="bg-gradient-to-br relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 container pr-0">
           <div className="py-24 text-lg relative z-10">
-            <h1 className="text-xl font-bold">소개</h1>
+            <h1 className="text-2xl font-bold">소개</h1>
 
             <p className="text-gray-11 max-w-[45ch]  mt-4 ">
               강남구 대치동 단국대학교부속소프트웨어고등학교(이하 단대소고)는
@@ -93,8 +93,11 @@ export default async function Home() {
 
       <div className=" py-24 dark ">
         <div className="container">
-          <h1 className="font-bold text-xl">단대소고만의 장점</h1>
-          <p className="mt-4">진양철 교장선생님</p>
+          <h1 className="text-center  font-bold text-2xl">단대소고만의 장점</h1>
+
+          <div>
+            <h2 className="text-xl font-semibold">Software 전공 학과 운영</h2>
+          </div>
         </div>
       </div>
     </>
