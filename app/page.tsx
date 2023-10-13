@@ -1,21 +1,25 @@
+import Outline from "@/components/home/outline";
 import QuickMenu from "@/components/home/quick-menu";
 import Nav from "@/components/nav";
 import { Button } from "@/components/ui/button";
+import { School, Cpu, Library, Pen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
   return (
     <>
+      <Outline />
+
       <main
         id="hero"
-        className="dark text-gray-12 relative min-h-screen text-white  justify-between pb-24  md:items-center w-full h-full"
+        className="dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
           <div className="mt-16">
-            <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
+            {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
               <span className="font-semibold uppercase">New</span> 와우
-            </div>
+            </div> */}
 
             <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl lg:tracking-tight lg:text-8xl">
               단대소고
@@ -62,18 +66,18 @@ export default async function Home() {
             alt=""
             className="blur-[2px] scale-[1.05] object-cover sm:object-center object-[80%_40%] select-none "
           />
-          <div className="bg-black/40 sm:bg-black/[35%] absolute inset-0 z-0"></div>
+          <div className="bg-black/60 sm:bg-black/[35%] absolute inset-0 z-0"></div>
         </div>
       </main>
 
       <div className="bg-gradient-to-br relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
-        <div className=" grid grid-cols-1 lg:grid-cols-2 container pr-0">
-          <div className="py-24 text-lg relative z-10">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
+          <div className="py-24 sm:text-lg relative z-10">
             <h1 className="text-2xl font-bold">소개</h1>
 
             <p className="text-gray-11 max-w-[45ch]  mt-4 ">
-              강남구 대치동 단국대학교부속소프트웨어고등학교(이하 단대소고)는
-              대학 진학을 목표로 하는 소프트웨어 전문 특성화 고등학교입니다.
+              강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는 대학
+              진학을 목표로 하는 소프트웨어 전문 특성화 고등학교입니다.
             </p>
             <p className="text-gray-11 max-w-[45ch]  mt-4">
               학생들이 소프트웨어, AI 등을 기반으로 대학에 진학할 수 있도록
@@ -91,12 +95,69 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className=" py-24 dark ">
-        <div className="container">
-          <h1 className="text-center  font-bold text-2xl">단대소고만의 장점</h1>
+      <div className=" py-24  ">
+        <div className="container text-sm">
+          <h1 className="text-center  font-bold text-4xl">
+            이래서 단대소고다!
+          </h1>
+          <p className="text-center mt-4">
+            단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
+            <br />
+            소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를 준비합니다.
+          </p>
 
-          <div>
-            <h2 className="text-xl font-semibold">Software 전공 학과 운영</h2>
+          <div className="grid mt-12 items max-w-5xl mx-auto -center gap-4 grid-cols-1 lg:grid-cols-[1fr_0.19fr_1fr]">
+            <div className="border p-6 rounded-md lg:col-span-2">
+              <span className="flex items-center gap-2">
+                <Cpu className="stroke-dksh-500" />
+                <h2 className="text-xl font-semibold">
+                  SOFTWARE 전공 학과 운영
+                </h2>
+              </span>
+              <p className="mt-4">
+                단대소고 학생들은 2학년부터
+                인공지능소프트웨어·사물인터넷소프트웨어·게임콘텐츠의
+                <br />
+                전공 학과를 선택하게 됩니다.
+                <br />
+                학생들은 2학년부터 원하는 학과를 선택하여 심화된 교육을 받을 수
+                있습니다.
+              </p>
+            </div>
+
+            <div className="border p-6 rounded-md">
+              <span className="flex items-center gap-2">
+                <Library className="stroke-violet-600" />
+                <h2 className="text-xl font-semibold">전문 교사진</h2>
+              </span>
+              <p className="mt-4">
+                단대소고는 소프트웨어 전문 교사진을 보유하고 있습니다.
+                <br />
+                학생들의 진로를 위해 교사들은 끊임없이 노력하고 있습니다.
+              </p>
+            </div>
+
+            <div className="border p-6 rounded-md">
+              <span className="flex items-center gap-2">
+                <School className="stroke-pink-500" />
+                <h2 className="text-xl font-semibold">최고의 시설</h2>
+              </span>
+              <p className="mt-4">
+                각 교실은 전자칠판이 설치되어 있으며, 학생들은 노트북을
+                지참합니다.
+                <br />
+                학생들은 스터디카페, 다수의 실습실 등 쾌적한 시설을 사용할 수
+                있습니다.
+              </p>
+            </div>
+
+            <div className="border p-6 rounded-md lg:col-span-2">
+              <span className="flex items-center gap-2">
+                <Pen className="stroke-black-500" />
+                <h2 className="text-xl font-semibold">작성중...</h2>
+              </span>
+              <p className="mt-4">히히</p>
+            </div>
           </div>
         </div>
       </div>

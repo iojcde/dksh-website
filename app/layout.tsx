@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import "@/app/glass.css";
 import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import type { Metadata } from "next";
