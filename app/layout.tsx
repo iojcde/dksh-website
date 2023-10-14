@@ -4,6 +4,8 @@ import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Provider } from "react-wrap-balancer";
+import gsap from "gsap";
 
 const pretendard = localFont({
   src: "../fonts/woff2/PretendardVariable.woff2",
@@ -23,9 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={pretendard.className}>
-        <Nav />
-        {children}
-        <Footer />
+        <Provider>
+          <Nav /> {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

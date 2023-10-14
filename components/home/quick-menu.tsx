@@ -1,7 +1,6 @@
 const QuickMenu = () => (
   <div className="quick-menu absolute bottom-0 inset-x-0 text-xs border-b border-gray-7 sm:text-sm text-gray-11">
-    <div className="w-full bg-gradient-to-b from-transparent to-black/50 h-6"></div>
-    <div className="bg-black/50">
+    <div>
       <div className="flex items-center container justify-center w-full  pb-2">
         <div className="w-full hidden sm:block">
           <span className="font-bold mr-4  ">최근 학교소식</span>

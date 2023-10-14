@@ -1,12 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
+
 const Footer = () => (
-  <footer className="bg-white flex justify-between container py-12 mt-8 border-t border-gray-4">
-    <div className="text-lg">
-      <span className="font-bold block text-xl tracking-tight text-dksh-500">
-        DKSH
-      </span>
-      <span className="font-bold block">단대소고</span>
-    </div>
+  <footer className="bg-white flex-col gap-4 flex lg:flex-row justify-between container py-12 mt-8 border-t border-gray-4">
+    <Image
+      alt=""
+      src="/dksh-logo.png"
+      className="h-6 mt-4  object-contain object-left"
+      width={500}
+      height={46}
+      quality={100}
+    />
+
     <div className="w-[50%] font-semibold">
       <div className="flex gap-6 mb-2">
         <Link href="/about">소개</Link>

@@ -3,7 +3,7 @@
   position: absolute;
   inset: 0;
   /*   Extend the backdrop to the bottom for it to "collect the light" outside of the nav */
-  --extended-by: 50px;
+  --extended-by: 100px;
   bottom: calc(-1 * var(--extended-by));
 
   --filter: blur(30px);
@@ -27,9 +27,9 @@
   left: 0;
   right: 0;
 
-  --extended-by: 30px;
+  --extended-by: 80px;
   --offset: 20px;
-  --thickness: 1.5px;
+  --thickness: 2px;
   height: calc(var(--extended-by) + var(--offset));
   /*   Offset is used to snuck the border backdrop slightly under the main backdrop for  smoother effect */
   top: calc(100% - var(--offset) + var(--thickness));

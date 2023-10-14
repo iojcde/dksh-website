@@ -5,15 +5,15 @@ import { Button } from "@/components/ui/button";
 import { School, Cpu, Library, Pen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 
 export default async function Home() {
   return (
     <>
       <Outline />
-
       <main
         id="hero"
-        className="dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
+        className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
           <div className="mt-16">
@@ -21,11 +21,14 @@ export default async function Home() {
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl lg:tracking-tight lg:text-8xl">
+            <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl">
               단대소고
             </h1>
-            <p className="mt-4 max-w-[32ch] text-gray-300 md:text-xl">
-              단대소고는 수도권 유일 소프트웨어 고등학교입니다.
+            <p className="mt-4 text-gray-300  max-w-[48ch]">
+              <Balancer>
+                서울 강남 대치동에 위치한 단국대학교부속소프트웨어고등학교는
+                수도권 유일 소프트웨어 고등학교입니다.
+              </Balancer>
             </p>
             <div className="mt-8 flex items-center gap-2">
               <Link
@@ -57,19 +60,7 @@ export default async function Home() {
         </div>
 
         <QuickMenu />
-
-        <div className=" -z-20  absolute inset-0 h-full">
-          <Image
-            priority
-            src="/dksh.webp"
-            fill
-            alt=""
-            className="blur-[2px] scale-[1.05] object-cover sm:object-center object-[80%_40%] select-none "
-          />
-          <div className="bg-black/60 sm:bg-black/[35%] absolute inset-0 z-0"></div>
-        </div>
       </main>
-
       <div className="bg-gradient-to-br relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
           <div className="py-24 sm:text-lg relative z-10">
@@ -94,16 +85,16 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
       <div className=" py-24  ">
         <div className="container text-sm">
           <h1 className="text-center  font-bold text-4xl">
             이래서 단대소고다!
           </h1>
-          <p className="text-center mt-4">
-            단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
-            <br />
-            소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를 준비합니다.
+          <p className="text-center mt-4 max-w-[50ch] mx-auto">
+            <Balancer>
+              단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
+              소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를 준비합니다.
+            </Balancer>
           </p>
 
           <div className="grid mt-12 items max-w-5xl mx-auto -center gap-4 grid-cols-1 lg:grid-cols-[1fr_0.19fr_1fr]">
@@ -154,11 +145,26 @@ export default async function Home() {
             <div className="border p-6 rounded-md lg:col-span-2">
               <span className="flex items-center gap-2">
                 <Pen className="stroke-black-500" />
-                <h2 className="text-xl font-semibold">작성중...</h2>
+                <h2 className="text-xl font-semibold">
+                  학생들이 직접 만들고 이끄는 동아리 시스템
+                </h2>
               </span>
               <p className="mt-4">히히</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="container max-w-4xl ">
+        <h1 className="text-3xl text-center font-bold">학교 전경</h1>
+
+        <div className="relative  mt-8 rounded-xl overflow-clip shadow aspect-[16/9] h-full">
+          <Image
+            fill
+            alt=""
+            src="/dksh.webp"
+            className="object-cover h-full object-center select-none "
+          />
         </div>
       </div>
     </>

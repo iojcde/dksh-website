@@ -2,8 +2,28 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+gsap.registerPlugin(ScrollTrigger);
+
 const Nav = () => {
+  const path = usePathname();
+
   useEffect(() => {
+    if (path != "/") {
+      gsap.set("#nav", {
+        color: "black",
+      });
+
+      gsap.set("#logo", {
+        filter: "invert(0)",
+      });
+      return;
+    }
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#hero",
@@ -11,23 +31,8 @@ const Nav = () => {
         scrub: true,
       },
     });
-    let mm = gsap.matchMedia();
-    mm.add("(min-width: 640px)", () => {
-      const toggleGlass = tl.fromTo(
-        ".glass",
-        {
-          autoAlpha: 0,
-        },
-        {
-          autoAlpha: 1,
-        }
-      );
-      return () => {
-        toggleGlass?.kill();
-      };
-    });
 
-    const toggleText = tl.fromTo(
+    tl.fromTo(
       "#nav",
       {
         color: "white",
@@ -37,27 +42,47 @@ const Nav = () => {
       }
     );
 
+    tl.fromTo("#logo", { filter: "invert(1)" }, { filter: "invert(0)" });
+
     return () => {
-      toggleText.kill();
+      tl.kill();
     };
-  }, []);
+  }, [path]);
 
   return (
     <nav
       id="nav"
-      className="py-4 px-6 h-14 flex items-center justify-between transition text-white fixed font-medium lg:px-12 w-full z-[100]"
+      className={cn(
+        "py-4 px-6 h-12 flex items-center justify-between  sticky top-0 font-medium lg:px-12 w-full z-[100]",
+        path != "/" ? "text-black" : "text-white"
+      )}
     >
-      <div className="bien-glass glass sm:invisible " />
-      <div className="bien-glass-edge glass sm:invisible"></div>
-
+      <div className={"bien-glass glass "} />
+      <div className={"bien-glass-edge glass "} />
       <div className="flex justify-between w-full items-center z-[100] relative">
-        <Link href="/" className="font-bold text-2xl tracking-tight">
-          DKSH
+        <Link
+          id="logo"
+          href="/"
+          className={cn(
+            "font-bold text-2xl tracking-tight",
+            path == "/" && "invert"
+          )}
+        >
+          <Image
+            src="/dksh-logo.png"
+            width={55}
+            height={24}
+            quality={100}
+            alt=""
+          ></Image>
         </Link>
 
-        <div className="flex items-center lg:gap-12">
+        <div className="flex items-center sm:gap-12">
           <Link className="hidden sm:block" href="/about">
             소개
+          </Link>
+          <Link className="hidden sm:block" href="/about/greeting">
+            인사말
           </Link>
           <Link className="hidden sm:block" href="/login">
             로그인
