@@ -36,3 +36,6 @@ p a {
  
 
  
+.black-to-dksh {
+  filter: invert(18%) sepia(99%) saturate(1618%) hue-rotate(192deg) brightness(98%) contrast(97%);
+}

@@ -47,14 +47,20 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="lg:mt-12 w-full rounded-[16px] shadow-xl">
+          <div className="lg:mt-12 w-full  relative rounded-[16px] shadow-xl">
             <div className="w-full overflow-clip rounded-sm lg:rounded-2xl  ">
               <iframe
-                className="w-full h-full aspect-video  outline-none border-none relative z-20"
+                className="w-full  border h-full aspect-video  outline-none border-none relative z-20"
                 src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>
+              ></iframe>{" "}
+              <Image
+                src="/blob.png"
+                className="-top-[40%] -rotate-45 blur-3xl  inset-x-0 absolute"
+                width={800}
+                height={800}
+              />
             </div>
           </div>
         </div>
@@ -149,7 +155,13 @@ export default async function Home() {
                   학생들이 직접 만들고 이끄는 동아리 시스템
                 </h2>
               </span>
-              <p className="mt-4">히히</p>
+              <p className="mt-4">
+                단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
+                있습니다.
+                <br />
+                학생들은 각자의 동아리에서 자신의 능력을 발휘하고 즐겁게 활동할
+                수 있습니다.
+              </p>
             </div>
           </div>
         </div>

@@ -35,10 +35,10 @@ const Nav = () => {
     tl.fromTo(
       "#nav",
       {
-        color: "white",
+        color: "#f9f9f9",
       },
       {
-        color: "black",
+        color: "#202020",
       }
     );
 
@@ -53,21 +53,14 @@ const Nav = () => {
     <nav
       id="nav"
       className={cn(
-        "py-4 px-6 h-12 flex items-center justify-between  sticky top-0 font-medium lg:px-12 w-full z-[100]",
-        path != "/" ? "text-black" : "text-white"
+        "py-4 px-6 h-12 flex items-center justify-between sticky lg:px-12 top-0 text-sm font-medium w-full z-[100]",
+        path != "/" ? "text-gray-2" : "text-gray-12"
       )}
     >
       <div className={"bien-glass glass "} />
       <div className={"bien-glass-edge glass "} />
-      <div className="flex justify-between w-full items-center z-[100] relative">
-        <Link
-          id="logo"
-          href="/"
-          className={cn(
-            "font-bold text-2xl tracking-tight",
-            path == "/" && "invert"
-          )}
-        >
+      <div className="flex items-center gap-12 z-[100] relative">
+        <Link id="logo" href="/" className={cn(path == "/" && "invert")}>
           <Image
             src="/dksh-logo.png"
             width={55}
@@ -77,18 +70,13 @@ const Nav = () => {
           ></Image>
         </Link>
 
-        <div className="flex items-center sm:gap-12">
-          <Link className="hidden sm:block" href="/about">
-            소개
-          </Link>
-          <Link className="hidden sm:block" href="/about/greeting">
-            인사말
-          </Link>
-          <Link className="hidden sm:block" href="/login">
-            로그인
-          </Link>
-          <button>메뉴</button>
-        </div>
+        <Link href="/about">학교소개</Link>
+        <Link href="/about/major">학과소개</Link>
+        <Link href="/admission">입학과 진학</Link>
+        <Link href="/login">학교생활</Link>
+      </div>
+      <div className="relative z-[100] flex items-center">
+        <Link href="/login">로그인</Link>
       </div>
     </nav>
   );

@@ -6,7 +6,7 @@
   --extended-by: 100px;
   bottom: calc(-1 * var(--extended-by));
 
-  --filter: blur(30px);
+  --filter: blur(30px) ;
   -webkit-backdrop-filter: var(--filter);
   backdrop-filter: var(--filter);
   pointer-events: none;
@@ -48,3 +48,7 @@
     transparent var(--offset)
   );
 } 
+
+
+
+ 

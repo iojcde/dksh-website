@@ -30,7 +30,8 @@ const GreetingPage = () => (
     </p>
 
     <div className="font-semibold">
-      단국대학교부속소프트웨어고등학교 교장직무대리 전 영 철
+      단국대학교부속소프트웨어고등학교 교장직무대리{" "}
+      <span className="text-xl">전 영 철</span>
     </div>
   </div>
 );

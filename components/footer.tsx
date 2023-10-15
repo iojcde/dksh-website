@@ -6,7 +6,7 @@ const Footer = () => (
     <Image
       alt=""
       src="/dksh-logo.png"
-      className="h-6 mt-4  object-contain object-left"
+      className="h-12 black-to-dksh mt-4  object-contain object-left"
       width={500}
       height={46}
       quality={100}
