@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -54,13 +56,17 @@ const Nav = () => {
       id="nav"
       className={cn(
         "py-4 px-6 h-12 flex items-center justify-between sticky lg:px-12 top-0 text-sm font-medium w-full z-[100]",
-        path != "/" ? "text-gray-2" : "text-gray-12"
+        path == "/" ? "text-[#f9f9f9]" : "text-[#202020]"
       )}
     >
       <div className={"bien-glass glass "} />
       <div className={"bien-glass-edge glass "} />
-      <div className="flex items-center gap-12 z-[100] relative">
-        <Link id="logo" href="/" className={cn(path == "/" && "invert")}>
+      <div className="flex items-center gap-10 z-[100] relative">
+        <Link
+          id="logo"
+          href="/"
+          className={cn(path == "/" && "invert", "select-none")}
+        >
           <Image
             src="/dksh-logo.png"
             width={55}
@@ -70,13 +76,18 @@ const Nav = () => {
           ></Image>
         </Link>
 
-        <Link href="/about">학교소개</Link>
-        <Link href="/about/major">학과소개</Link>
-        <Link href="/admission">입학과 진학</Link>
-        <Link href="/login">학교생활</Link>
+        <div className="sm:flex items-center gap-10 hidden ">
+          <Link href="/about">학교소개</Link>
+          <Link href="/about/major">학과소개</Link>
+          <Link href="/admission">입학과 진학</Link>
+          <Link href="/login">학교생활</Link>
+        </div>
       </div>
-      <div className="relative z-[100] flex items-center">
+      <div className="relative z-[100] flex gap-4 lg:gap-10 items-center">
         <Link href="/login">로그인</Link>
+        <button>
+          <Menu />
+        </button>
       </div>
     </nav>
   );

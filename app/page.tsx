@@ -16,15 +16,15 @@ export default async function Home() {
         className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
-          <div className="mt-16">
+          <div className="mt-20">
             {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl">
+            <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
               단대소고
             </h1>
-            <p className="mt-4 text-gray-300  max-w-[48ch]">
+            <p className="mt-4 text-gray-300 text-lg  max-w-[48ch]">
               <Balancer>
                 서울 강남 대치동에 위치한 단국대학교부속소프트웨어고등학교는
                 수도권 유일 소프트웨어 고등학교입니다.
@@ -47,47 +47,52 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="lg:mt-12 w-full  relative rounded-[16px] shadow-xl">
-            <div className="w-full overflow-clip bg-black rounded-sm border border-gray-7 lg:rounded-2xl  ">
-              <iframe
-                className="w-full  h-full aspect-video  outline-none border-none relative z-20"
-                src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>{" "}
-              <Image
-                alt=""
-                src="/blob.png"
-                className="-top-[40%] -rotate-45 blur-3xl  inset-x-0 absolute"
-                width={800}
-                height={800}
-              />
+          <div className="lg:mt-10 w-full relative z-10 h-full  shadow-xl">
+            <div className=" overflow-hidden relative z-50 bg-gray-2 rounded-lg border-gray-5 border p-1 lg:rounded-2xl  ">
+              <div className="overflow-hidden rounded-xl aspect-video border border-gray-4 relative">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
+                  src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </div>
             </div>
+            <Image
+              alt=""
+              src="/blob.png"
+              className="-top-[35%] scale-[105%] -rotate-45 blur-3xl inset-x-0 absolute"
+              width={800}
+              height={800}
+            />
           </div>
         </div>
 
         <QuickMenu />
       </main>
-      <div className="bg-gradient-to-br relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
-        <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
+
+      <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
+        <div className=" grid lg:grid-cols-2 container sm:pr-0">
           <div className="py-24 sm:text-lg relative z-10">
             <h1 className="text-2xl font-bold">소개</h1>
 
-            <p className="text-gray-11 max-w-[45ch]  mt-4 ">
-              강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는 대학
-              진학을 목표로 하는 소프트웨어 전문 특성화 고등학교입니다.
+            <p className="text-gray-11 mt-4">
+              강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는
+              <br className="hidden sm:block" /> 대학 진학을 목표로 하는
+              소프트웨어 전문 특성화고등학교입니다.
             </p>
             <p className="text-gray-11 max-w-[45ch]  mt-4">
               학생들이 소프트웨어, AI 등을 기반으로 대학에 진학할 수 있도록
               전문적인 교사진을 구성해 진로 지도에 힘써오고 있습니다.
             </p>
           </div>
-          <div className="relative w-full h-full">
+          <div className="w-full h-full relative">
             <Image
               fill
+              quality={100}
               alt=""
               src="/wow.png"
-              className="object-cover w-[50%] object-center select-none "
+              className="object-cover   object-center select-none h-full "
             />
           </div>
         </div>
@@ -112,7 +117,7 @@ export default async function Home() {
                   SOFTWARE 전공 학과 운영
                 </h2>
               </span>
-              <p className="mt-4">
+              <p className="mt-2">
                 단대소고 학생들은 2학년부터
                 인공지능소프트웨어·사물인터넷소프트웨어·게임콘텐츠의
                 <br />
@@ -128,7 +133,7 @@ export default async function Home() {
                 <Library className="stroke-violet-600" />
                 <h2 className="text-xl font-semibold">전문 교사진</h2>
               </span>
-              <p className="mt-4">
+              <p className="mt-2">
                 단대소고는 소프트웨어 전문 교사진을 보유하고 있습니다.
                 <br />
                 학생들의 진로를 위해 교사들은 끊임없이 노력하고 있습니다.
@@ -140,7 +145,7 @@ export default async function Home() {
                 <School className="stroke-pink-500" />
                 <h2 className="text-xl font-semibold">최고의 시설</h2>
               </span>
-              <p className="mt-4">
+              <p className="mt-2">
                 각 교실은 전자칠판이 설치되어 있으며, 학생들은 노트북을
                 지참합니다.
                 <br />
@@ -156,7 +161,7 @@ export default async function Home() {
                   학생들이 직접 만들고 이끄는 동아리 시스템
                 </h2>
               </span>
-              <p className="mt-4">
+              <p className="mt-2">
                 단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
                 있습니다.
                 <br />

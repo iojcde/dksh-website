@@ -1,9 +1,10 @@
  
  .bien-glass {
+  -webkit-transform:translate3d(0,0,0);
   position: absolute;
   inset: 0;
   /*   Extend the backdrop to the bottom for it to "collect the light" outside of the nav */
-  --extended-by: 100px;
+  --extended-by: 80px;
   bottom: calc(-1 * var(--extended-by));
 
   --filter: blur(30px) ;
@@ -22,12 +23,13 @@
 }
 
 .bien-glass-edge {
+  -webkit-transform:translate3d(0,0,0);
   position: absolute;
   z-index: -1;
   left: 0;
   right: 0;
 
-  --extended-by: 80px;
+  --extended-by: 60px;
   --offset: 20px;
   --thickness: 2px;
   height: calc(var(--extended-by) + var(--offset));
