@@ -48,14 +48,15 @@ export default async function Home() {
           </div>
 
           <div className="lg:mt-12 w-full  relative rounded-[16px] shadow-xl">
-            <div className="w-full overflow-clip rounded-sm lg:rounded-2xl  ">
+            <div className="w-full overflow-clip bg-black rounded-sm border lg:rounded-2xl  ">
               <iframe
-                className="w-full  border h-full aspect-video  outline-none border-none relative z-20"
+                className="w-full  h-full aspect-video  outline-none border-none relative z-20"
                 src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               ></iframe>{" "}
               <Image
+              alt=''
                 src="/blob.png"
                 className="-top-[40%] -rotate-45 blur-3xl  inset-x-0 absolute"
                 width={800}
