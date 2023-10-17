@@ -2,7 +2,7 @@ import Outline from "@/components/home/outline";
 import QuickMenu from "@/components/home/quick-menu";
 import Nav from "@/components/nav";
 import { Button } from "@/components/ui/button";
-import { School, Cpu, Library, Pen } from "lucide-react";
+import { School, Cpu, Library, Pen, Users2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
@@ -11,13 +11,11 @@ import { Details } from "./details";
 export default async function Home() {
   return (
     <>
-      <Outline />
-
-      <Details />
       <main
         id="hero"
-        className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
+        className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen w-screen overflow-hidden text-white  justify-between pb-24  md:items-center  h-full"
       >
+        <Details />
         <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
           <div className="mt-20 relative z-20">
             {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
@@ -27,10 +25,10 @@ export default async function Home() {
             <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
               단대소고
             </h1>
-            <p className="mt-4 text-gray-300 text-lg  max-w-[48ch]">
+            <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
               <Balancer>
-                서울 강남 대치동에 위치한 단국대학교부속소프트웨어고등학교는
-                수도권 유일 소프트웨어 고등학교입니다.
+                강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는 수도권
+                유일 소프트웨어 고등학교입니다.
               </Balancer>
             </p>
             <div className="mt-8 flex items-center gap-2">
@@ -78,7 +76,7 @@ export default async function Home() {
           <div className="py-24 sm:text-lg relative z-10">
             <h1 className="text-2xl font-bold">소개</h1>
 
-            <p className="text-gray-11 mt-4">
+            <p className="text-gray-12 mt-4">
               강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는
               <br className="hidden sm:block" /> 대학 진학을 목표로 하는
               소프트웨어 전문 특성화고등학교입니다.
@@ -112,7 +110,7 @@ export default async function Home() {
           </p>
 
           <div className="grid mt-12 items max-w-5xl mx-auto -center gap-4 grid-cols-1 lg:grid-cols-[1fr_0.19fr_1fr]">
-            <div className="border p-6 rounded-md lg:col-span-2">
+            <div className="border shadow p-6 rounded-md lg:col-span-2">
               <span className="flex items-center gap-2">
                 <Cpu className="stroke-dksh-500" />
                 <h2 className="text-xl font-semibold">
@@ -130,7 +128,7 @@ export default async function Home() {
               </p>
             </div>
 
-            <div className="border p-6 rounded-md">
+            <div className="border shadow p-6 rounded-md">
               <span className="flex items-center gap-2">
                 <Library className="stroke-violet-600" />
                 <h2 className="text-xl font-semibold">전문 교사진</h2>
@@ -142,7 +140,7 @@ export default async function Home() {
               </p>
             </div>
 
-            <div className="border p-6 rounded-md">
+            <div className="border shadow p-6 rounded-md">
               <span className="flex items-center gap-2">
                 <School className="stroke-pink-500" />
                 <h2 className="text-xl font-semibold">최고의 시설</h2>
@@ -156,19 +154,19 @@ export default async function Home() {
               </p>
             </div>
 
-            <div className="border p-6 rounded-md lg:col-span-2">
+            <div className="border shadow p-6 rounded-md lg:col-span-2">
               <span className="flex items-center gap-2">
-                <Pen className="stroke-black-500" />
+                <Users2 className=" stroke-violet-500" />
                 <h2 className="text-xl font-semibold">
-                  학생들이 직접 만들고 이끄는 동아리 시스템
+                  학생 주도 동아리 시스템
                 </h2>
               </span>
               <p className="mt-2">
                 단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
                 있습니다.
-                <br />
-                학생들은 각자의 동아리에서 자신의 능력을 발휘하고 즐겁게 활동할
-                수 있습니다.
+                <br />총 21개의 학생들이 자율적으로 개설한 창체동아리가 있으며,
+                학생들은 동아리에서 자신의 능력을 발휘하고 즐겁게 활동할 수
+                있습니다.
               </p>
             </div>
           </div>

@@ -10,7 +10,9 @@
 	src: url('../fonts/woff2/PretendardVariable.woff2') format('woff2-variations');
 }
 
+
 @layer base {
+ 
   .ease-ease {
     transition-timing-function: ease !important;
   }
