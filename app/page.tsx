@@ -6,17 +6,20 @@ import { School, Cpu, Library, Pen } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
+import { Details } from "./details";
 
 export default async function Home() {
   return (
     <>
       <Outline />
+
+      <Details />
       <main
         id="hero"
         className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen overflow-clip text-white  justify-between pb-24  md:items-center w-full h-full"
       >
         <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
-          <div className="mt-20">
+          <div className="mt-20 relative z-20">
             {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
@@ -33,22 +36,22 @@ export default async function Home() {
             <div className="mt-8 flex items-center gap-2">
               <Link
                 href="/login"
-                className=" inline-block select-none rounded-md border border-dksh-600 bg-gradient-to-br from-dksh-500 to-dksh-400  p-2 px-8 text-white  transition  text-sm hover:opacity-95 hover:shadow"
+                className=" inline-block select-none rounded-md border border-dksh-700 bg-gradient-to-br from-dksh-500 to-dksh-400  p-2 px-8 text-white  transition  text-sm hover:opacity-95 hover:shadow"
               >
                 더 알아보기
               </Link>
 
               <Link
                 href="https://gall.dcinside.com/mgallery/board/lists/?id=dksw"
-                className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-6 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
+                className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-5 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
               >
                 재학생 포털
               </Link>
             </div>
           </div>
 
-          <div className="lg:mt-10 w-full relative z-10 h-full  shadow-xl">
-            <div className=" overflow-hidden relative z-50 bg-gray-2 rounded-lg border-gray-5 border p-1 lg:rounded-2xl  ">
+          <div className="lg:mt-10 w-full relative z-20 h-full ">
+            <div className=" overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-lg border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
                   className="absolute top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
@@ -70,9 +73,8 @@ export default async function Home() {
 
         <QuickMenu />
       </main>
-
       <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
-        <div className=" grid lg:grid-cols-2 container sm:pr-0">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
           <div className="py-24 sm:text-lg relative z-10">
             <h1 className="text-2xl font-bold">소개</h1>
 
@@ -86,13 +88,13 @@ export default async function Home() {
               전문적인 교사진을 구성해 진로 지도에 힘써오고 있습니다.
             </p>
           </div>
-          <div className="w-full h-full relative">
+          <div className="w-full h-full min-h-[9rem] relative">
             <Image
               fill
               quality={100}
               alt=""
               src="/wow.png"
-              className="object-cover   object-center select-none h-full "
+              className="object-cover z-10  object-center select-none h-full "
             />
           </div>
         </div>
@@ -172,7 +174,6 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
       <div className="container max-w-4xl ">
         <h1 className="text-3xl text-center font-bold">학교 전경</h1>
 
