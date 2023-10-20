@@ -2,7 +2,7 @@ import { getPosts } from "@/actions/board/get-posts";
 import { JSDOM } from "jsdom";
 import { useEffect } from "react";
 import { Opener } from "../../opener";
-import BoardNavigation from "../../navigation"; 
+import BoardNavigation from "../../navigation";
 
 const removeEl = (document: Document, queryselector: string) => {
   document.querySelectorAll(queryselector).forEach((el) => {
@@ -42,7 +42,7 @@ const Announcements = async ({
         className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: dom.serialize() }}
       />
-      <Opener boardName="gatongs" />
+      <Opener boardName="gatong" />
       <BoardNavigation boardName="gatongs" />
     </div>
   );
