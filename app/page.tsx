@@ -76,12 +76,12 @@ export default async function Home() {
           <div className="py-24 sm:text-lg relative z-10">
             <h1 className="text-2xl font-bold">소개</h1>
 
-            <p className="text-gray-12 mt-4">
+            <p className="text-dksh-800 mt-4">
               강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는
               <br className="hidden sm:block" /> 대학 진학을 목표로 하는
               소프트웨어 전문 특성화고등학교입니다.
             </p>
-            <p className="text-gray-11 max-w-[45ch]  mt-4">
+            <p className="text-dksh-800 max-w-[45ch]  mt-4">
               학생들이 소프트웨어, AI 등을 기반으로 대학에 진학할 수 있도록
               전문적인 교사진을 구성해 진로 지도에 힘써오고 있습니다.
             </p>

@@ -22,7 +22,7 @@
     
   }
   * {
-    @apply border-border dark:border-gray-7;
+    @apply border-border dark:border-gray-6;
      
   }
   body {
@@ -41,3 +41,22 @@ p a {
 .black-to-dksh {
   filter: invert(18%) sepia(99%) saturate(1618%) hue-rotate(192deg) brightness(98%) contrast(97%);
 }
+
+.transition-colors-children {
+  @apply transition-colors duration-100
+}
+
+.subject {
+  @apply flex gap-2 items-center prose-img:m-0; 
+}
+ 
+ 
+caption{
+  @apply sr-only
+}
+
+.flag_notice{
+  @apply text-dksh-400 font-bold whitespace-nowrap 
+}
+ 
+ 
