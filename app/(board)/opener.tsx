@@ -12,7 +12,7 @@ import { useEffect } from "react";
 export const Opener = ({ boardName }: { boardName: string }) => {
   const router = useRouter();
   useEffect(() => {
-    document.fnView = (boardName: string, nttId: number) => {
+    document.fnView = (nttId: number) => {
       router.push(`/${boardName}/${nttId}`);
     };
   });
