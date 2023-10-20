@@ -34,7 +34,7 @@ export const getPosts = async ({
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": '"Windows"',
       },
-      body: `bbsId=${bbsId}&bbsTyCode=${boardId}&customRecordCountPerPage=${countPerPage}&pageIndex=${index}`,
+      body: `bbsId=${bbsId}&bbsTyCode=${boardId}&customRecordCountPerPage=${countPerPage}&pageIndex=${index}&searchCondition=&searchKeyword=&checkNttId=&mvmnReturnUrl=`,
       next: {
         revalidate: 300,
       },

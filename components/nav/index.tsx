@@ -52,7 +52,7 @@ const Nav = () => {
     <nav
       id="nav"
       className={cn(
-        "py-4 px-6 h-12 flex items-center   text-foreground justify-between sticky lg:px-12 top-0 text-sm font-medium w-full z-[100]",
+        "py-4 px-6 h-12 flex items-center   text-foreground justify-between sticky xl:px-12 top-0 text-sm font-medium w-full z-[100]",
         path == "/" ? "dark" : ""
       )}
     >

@@ -6,7 +6,7 @@ export const getPost = async ({
   nttId: number;
   bbsId: string;
   boardId: string;
-}) => {
+}) => { 
   const res = await fetch(
     "https://dankook.sen.hs.kr/dggb/module/board/selectBoardDetailAjax.do",
     {
@@ -20,7 +20,7 @@ export const getPost = async ({
         Cookie: process.env.DKSH_COOKIE as string,
         Origin: "https://dankook.sen.hs.kr",
         Pragma: "no-cache",
-        // Referer: "https://dankook.sen.hs.kr/63361/subMenu.do",
+        Referer: "https://dankook.sen.hs.kr/63361/subMenu.do",
         "Sec-Fetch-Dest": "empty",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-origin",

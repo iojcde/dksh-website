@@ -16,7 +16,7 @@ export default async function Home() {
         className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen w-screen overflow-hidden text-white  justify-between pb-24  md:items-center  h-full"
       >
         <Details />
-        <div className="container grid grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-12">
+        <div className="container grid justify-center grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-6 sm:gap-12">
           <div className="mt-20 relative z-20">
             {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
               <span className="font-semibold uppercase">New</span> 와우
@@ -48,9 +48,9 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="lg:mt-10 w-full relative z-20 h-full ">
-            <div className=" overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-lg border-gray-5 border p-1 lg:rounded-2xl  ">
-              <div className="overflow-hidden rounded-xl aspect-video border border-gray-4 relative">
+          <div className="mt-10 w-full relative z-20 ">
+            <div className=" overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
+              <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
                   className="absolute top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
                   src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
