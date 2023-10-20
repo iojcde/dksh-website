@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Document {
+    fnView: any;
+  }
+}
+
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
