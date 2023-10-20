@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { MoveLeft, MoveRight } from "lucide-react";
-import Link from "next/Link";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 const BoardNavigation = ({ boardName }: { boardName: string }) => {
   const pathname = usePathname();
