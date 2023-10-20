@@ -35,7 +35,6 @@ const Nav = () => {
       scrollTrigger: {
         trigger: "#hero",
         start: "bottom top+=50px",
-        markers: true,
         endTrigger: "html",
         end: "bottom top",
         onToggle: () => {
