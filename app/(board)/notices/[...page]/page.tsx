@@ -41,7 +41,7 @@ const Announcements = async ({
         className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: dom.serialize() }}
       />
-      <Opener boardName="notices" />
+      <Opener boardName="notice" />
       <BoardNavigation boardName="notices" />
     </div>
   );

@@ -1,7 +1,8 @@
 import { createPlugin } from "windy-radix-palette";
-const colors = createPlugin();
+const colors = createPlugin({
+  opacitySupport: true,
+});
 const alias = colors.alias;
-
 const config = {
   darkMode: "class",
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
@@ -17,16 +18,17 @@ const config = {
     extend: {
       colors: () => ({
         dksh: {
-          50: "hsl(208, 95%, 70%)",
-          100: "hsl(208, 95%, 60%)",
-          200: "hsl(208, 95%, 50%)",
-          300: "hsl(208, 95%, 45%)",
-          400: "hsl(208, 95%, 40%)",
-          500: "hsl(208, 95%, 30%)",
-          600: "hsl(208, 95%, 25%)",
-          700: "hsl(208, 95%, 20%)",
-          800: "hsl(208, 95%, 15%)",
-          900: "hsl(208, 95%, 10%)",
+          25: "hsl(var(--dksh-25))",
+          50: "hsl(var(--dksh-50))",
+          100: "hsl(var(--dksh-100))",
+          200: "hsl(var(--dksh-200))",
+          300: "hsl(var(--dksh-300))",
+          400: "hsl(var(--dksh-400))",
+          500: "hsl(var(--dksh-500))",
+          600: "hsl(var(--dksh-600))",
+          700: "hsl(var(--dksh-700))",
+          800: "hsl(var(--dksh-800))",
+          900: "hsl(var(--dksh-900))",
         },
         border: alias("gray", 5),
         input: alias("gray", 6),
@@ -50,7 +52,8 @@ const config = {
           foreground: alias("gray", 11),
         },
         accent: {
-          DEFAULT: `${alias("gray", 3)}/20`,
+          // DEFAULT: `${alias("gray", 3)}/80`,
+          DEFAULT: "rgb(var(--gray3) / 0.8)",
           foreground: alias("gray", 12),
         },
         popover: {

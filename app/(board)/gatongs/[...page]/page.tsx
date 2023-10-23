@@ -39,7 +39,7 @@ const Announcements = async ({
       <h1 className="text-3xl font-bold">가정통신문</h1>
       <span className="mt-2 text-sm text-gray-11">{pageNumber} 페이지</span>
       <div
-        className="prose max-w-none"
+        className="prose prose-a:no-underline board max-w-none"
         dangerouslySetInnerHTML={{ __html: dom.serialize() }}
       />
       <Opener boardName="gatong" />

@@ -2,7 +2,7 @@ const QuickMenu = () => (
   <div className="quick-menu absolute bottom-0 inset-x-0 text-xs border-b border-gray-7 sm:text-sm text-gray-11">
     <div>
       <div className="flex items-center container justify-center w-full  pb-2">
-        <div className="w-full hidden sm:block">
+        <div className="w-full hidden md:block">
           <span className="font-bold mr-4  ">최근 학교소식</span>
           <span>오장원 교장선생님이 단대부고로 가심</span>
         </div>

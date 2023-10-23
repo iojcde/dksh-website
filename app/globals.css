@@ -17,20 +17,26 @@
     transition-timing-function: ease !important;
   }
 
-  :root {
-    --radius: 0.75rem;
-    
-  }
+ 
   * {
     @apply border-border dark:border-gray-6;
      
   }
-  body {
-    @apply overflow-x-clip bg-white dark:bg-black  selection:bg-dksh-200/30;
+ html{
+    @apply overflow-x-clip w-full bg-white dark:bg-black  ;
+     
+  
   } 
- 
+
 }
  
+.black-to-dksh {
+    filter: invert(18%) sepia(99%) saturate(1618%) hue-rotate(192deg) brightness(98%) contrast(97%);
+  }
+  
+.dark .black-to-dksh{
+  filter: invert(90%);
+}
 
 p a {
   @apply underline underline-offset-2;
@@ -38,9 +44,7 @@ p a {
  
 
  
-.black-to-dksh {
-  filter: invert(18%) sepia(99%) saturate(1618%) hue-rotate(192deg) brightness(98%) contrast(97%);
-}
+
 
 .transition-colors-children {
   @apply transition-colors duration-100
@@ -60,3 +64,33 @@ caption{
 }
  
  
+ 
+ 
+.dimigo {
+  --dksh-25: 330, 92%, 100%;
+  --dksh-50: 330, 92%, 100%; 
+  --dksh-500: 330, 92%, 90%;
+  --dksh-600: 330, 92%, 80%;
+  --dksh-700: 330, 92%, 70%;
+  --dksh-800: 330, 92%, 60%;
+  --dksh-900: 330, 92%, 50%;
+
+
+}
+
+:root {
+    --radius: 0.75rem;
+    --dksh-25:  208, 95%, 85%;
+    --dksh-50: 208, 95%, 70%;
+    --dksh-100: 208, 95%, 60%;
+    --dksh-200: 208, 95%, 50%;
+    --dksh-300: 208, 95%, 45%;
+    --dksh-400: 208, 95%, 40%;
+    --dksh-500: 208, 95%, 30%;
+    --dksh-600: 208, 95%, 25%;
+    --dksh-700: 208, 95%, 20%;
+    --dksh-800: 208, 95%, 15%;
+    --dksh-900: 208, 95%, 10%;
+  
+    @apply selection:bg-sky-9/30
+  }

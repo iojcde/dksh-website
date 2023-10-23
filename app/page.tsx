@@ -2,7 +2,17 @@ import Outline from "@/components/home/outline";
 import QuickMenu from "@/components/home/quick-menu";
 import Nav from "@/components/nav";
 import { Button } from "@/components/ui/button";
-import { School, Cpu, Library, Pen, Users2 } from "lucide-react";
+import {
+  School,
+  Cpu,
+  Library,
+  Pen,
+  Users2,
+  PlusCircle,
+  BrainCircuit,
+  Router,
+  Gamepad,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
@@ -13,16 +23,16 @@ export default async function Home() {
     <>
       <main
         id="hero"
-        className="-mt-12 bg-gradient-to-br from-black via-black to-dksh-800 dark text-gray-12 relative min-h-screen w-screen overflow-hidden text-white  justify-between pb-24  md:items-center  h-full"
+        className="-mt-12 bg-gradient-to-br flex items-center from-black  to-dksh-900 dark text-gray-12 relative min-h-screen overflow-hidden   pb-24 justify-between w-full  h-full"
       >
         <Details />
-        <div className="container grid justify-center grid-cols-1 lg:grid-cols-2 pt-24 lg:pt-32 gap-6 sm:gap-12">
-          <div className="mt-20 relative z-20">
+        <div className="container grid h-full pt-16  grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 ">
+          <div className="relative z-30 mt-8">
             {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="font-display font-bold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
+            <h1 className="font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
               단대소고
             </h1>
             <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
@@ -33,22 +43,22 @@ export default async function Home() {
             </p>
             <div className="mt-8 flex items-center gap-2">
               <Link
-                href="/login"
-                className=" inline-block select-none rounded-md border border-dksh-700 bg-gradient-to-br from-dksh-500 to-dksh-400  p-2 px-8 text-white  transition  text-sm hover:opacity-95 hover:shadow"
+                href="/about"
+                className=" inline-block select-none rounded-md  bg-gradient-to-br from-dksh-500 to-dksh-600  p-2 px-8 text-white  transition  text-sm hover:opacity-95 hover:shadow"
               >
                 더 알아보기
               </Link>
 
               <Link
                 href="https://gall.dcinside.com/mgallery/board/lists/?id=dksw"
-                className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-5 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
+                className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-4 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
               >
                 재학생 포털
               </Link>
             </div>
           </div>
 
-          <div className="mt-10 w-full relative z-20 ">
+          <div className="w-full relative z-20 ">
             <div className=" overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
@@ -71,10 +81,10 @@ export default async function Home() {
 
         <QuickMenu />
       </main>
-      <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-[hsl(208,95%,85%)] ">
+      <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-dksh-25 ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
           <div className="py-24 sm:text-lg relative z-10">
-            <h1 className="text-2xl font-bold">소개</h1>
+            <h1 className="text-2xl font-extrabold">소개</h1>
 
             <p className="text-dksh-800 mt-4">
               강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는
@@ -97,23 +107,27 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className=" py-24  ">
-        <div className="container text-sm">
-          <h1 className="text-center  font-bold text-4xl">
-            이래서 단대소고다!
-          </h1>
-          <p className="text-center mt-4 max-w-[50ch] mx-auto">
-            <Balancer>
-              단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
-              소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를 준비합니다.
-            </Balancer>
-          </p>
+      <div className=" py-20  ">
+        <div className="container  text-sm">
+          <div className="lg:px-8 max-w-6xl text-center mx-auto">
+            <span className="text-dksh-500 font-semibold mt-8">
+              단대소고만의 장점
+            </span>
 
+            <h1 className="font-extrabold text-4xl mt-4">이래서 단대소고다!</h1>
+            <p className=" mt-4 max-w-[50ch] mx-auto">
+              <Balancer>
+                단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
+                소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를
+                준비합니다.
+              </Balancer>
+            </p>
+          </div>
           <div className="grid mt-12 items max-w-5xl mx-auto -center gap-4 grid-cols-1 lg:grid-cols-[1fr_0.19fr_1fr]">
-            <div className="border shadow p-6 rounded-md lg:col-span-2">
+            <div className="border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg lg:col-span-2">
               <span className="flex items-center gap-2">
-                <Cpu className="stroke-dksh-500" />
-                <h2 className="text-xl font-semibold">
+                <Cpu className="stroke-dksh-400" />
+                <h2 className="text-xl tracking-tight font-bold">
                   SOFTWARE 전공 학과 운영
                 </h2>
               </span>
@@ -127,11 +141,12 @@ export default async function Home() {
                 있습니다.
               </p>
             </div>
-
-            <div className="border shadow p-6 rounded-md">
+            <div className="border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg">
               <span className="flex items-center gap-2">
                 <Library className="stroke-violet-600" />
-                <h2 className="text-xl font-semibold">전문 교사진</h2>
+                <h2 className="text-xl tracking-tight  font-bold">
+                  전문 교사진
+                </h2>
               </span>
               <p className="mt-2">
                 단대소고는 소프트웨어 전문 교사진을 보유하고 있습니다.
@@ -139,11 +154,12 @@ export default async function Home() {
                 학생들의 진로를 위해 교사들은 끊임없이 노력하고 있습니다.
               </p>
             </div>
-
-            <div className="border shadow p-6 rounded-md">
+            <div className="border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg">
               <span className="flex items-center gap-2">
                 <School className="stroke-pink-500" />
-                <h2 className="text-xl font-semibold">최고의 시설</h2>
+                <h2 className="text-xl tracking-tight font-bold">
+                  최고의 시설
+                </h2>
               </span>
               <p className="mt-2">
                 각 교실은 전자칠판이 설치되어 있으며, 학생들은 노트북을
@@ -153,11 +169,10 @@ export default async function Home() {
                 있습니다.
               </p>
             </div>
-
-            <div className="border shadow p-6 rounded-md lg:col-span-2">
+            <div className="border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg lg:col-span-2">
               <span className="flex items-center gap-2">
-                <Users2 className=" stroke-violet-500" />
-                <h2 className="text-xl font-semibold">
+                <Users2 className=" stroke-sky-500" />
+                <h2 className="text-xl tracking-tight font-bold">
                   학생 주도 동아리 시스템
                 </h2>
               </span>
@@ -172,16 +187,77 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="container max-w-4xl ">
-        <h1 className="text-3xl text-center font-bold">학교 전경</h1>
 
-        <div className="relative  mt-8 rounded-xl overflow-clip shadow aspect-[16/9] h-full">
-          <Image
-            fill
-            alt=""
-            src="/dksh.webp"
-            className="object-cover h-full object-center select-none "
-          />
+      <div className="container py-24">
+        <h1 className="text-4xl font-extrabold xl:px-8">세부 전공 소개</h1>
+        <div className=" grid xl:grid-cols-3  mx-auto gap-12 text-sm text-gray-11 mt-16 justify-center place-items-center">
+          <div className="max-w-xs">
+            <div className="bg-pink-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+              <BrainCircuit />
+            </div>
+            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
+              AI SOFTWARE
+            </h2>
+            <p className="mt-2">
+              4차 산업혁명과 함께 산업 전 분야에서 AI 응용 기술에 대한 수요가
+              급격히 증가함에 따라, 데이터 과학 기초 교육, 기초 AI 원리 교육 및
+              응용실습을 통한 융·복합 인재 양성을 목표로 하고 있습니다.
+            </p>
+          </div>
+          <div className="max-w-xs">
+            <div className="bg-dksh-400 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+              <Router />
+            </div>
+
+            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
+              IoT SOFTWARE
+            </h2>
+            <p className="mt-2">
+              지능화된 사물들과 인터넷을 통해 새로운 서비스와 효용이 창출될 수
+              있도록 기초 기술에서 응용 기술까지 이론과 실무 능력을 고루 갖춘
+              수준 높은 엔지니어를 양성하는 학과입니다.
+            </p>
+          </div>
+          <div className="max-w-xs">
+            <div className="bg-violet-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+              <Gamepad />
+            </div>
+            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
+              GAME SOFTWARE
+            </h2>
+            <p className="mt-2">
+              21세기 문화 산업의 중심이 되고 있는 게임 산업의 주역이 되는 게임
+              개발자가 되기 위해 게임 컨텐츠과에서 배우는 모든 과정은 창조하고
+              도전하는 현장맞춤형 실무능력을 보유한 인재 양성을 목표로 합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container py-24">
+        <div className="flex items-center justify-center flex-wrap gap-8">
+          <div className=" max-w-xl overflow-hidden rounded-xl w-full shadow-inner">
+            <Image
+              className="hover:scale-105 transition duration-300"
+              alt="단대소고 위치"
+              src="/map.png"
+              width={1140}
+              height={789}
+            />
+          </div>
+          <div className=" max-w-sm pb-16">
+            <h1 className="text-3xl font-bold">오시는 길</h1>
+            <p className=" text-gray-11 mt-8">
+              단대소고는 교육 1번지 강남구 대치동의 중심에 위치해 있습니다.
+              한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학에 용이합니다.
+            </p>
+            <h2 className="font-bold mt-8">세부 주소</h2>
+            <p>
+              [06278] 서울 강남구 도곡로64길 21 <br />
+              (대치동 1013, 단국대학교부속소프트웨어고등학교)
+            </p>
+            div
+          </div>
         </div>
       </div>
     </>
