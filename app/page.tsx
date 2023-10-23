@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { Details } from "./details";
+import Ohjangwon from "./ohjangwon";
 
 export default async function Home() {
   return (
@@ -32,7 +33,7 @@ export default async function Home() {
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
+            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
               단대소고
             </h1>
             <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
@@ -59,16 +60,18 @@ export default async function Home() {
           </div>
 
           <div className="w-full relative z-20 ">
-            <div className=" overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
+            <div className="promote-video overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
-                  className="absolute top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
+                  className="absolute  top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
                   src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </div>
             </div>
+
+            <Ohjangwon />
             <Image
               alt=""
               src="/blob.png"
@@ -78,7 +81,6 @@ export default async function Home() {
             />
           </div>
         </div>
-
         <QuickMenu />
       </main>
       <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-dksh-25 ">
@@ -190,7 +192,8 @@ export default async function Home() {
 
       <div className="container py-24">
         <h1 className="text-4xl font-extrabold xl:px-8">세부 전공 소개</h1>
-        <div className=" grid xl:grid-cols-3  mx-auto gap-12 text-sm text-gray-11 mt-16 justify-center place-items-center">
+        <hr className="my-5 border-gray-4" />
+        <div className=" grid xl:grid-cols-3  mx-auto gap-12 text-sm text-gray-11 justify-center place-items-center">
           <div className="max-w-xs">
             <div className="bg-pink-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
               <BrainCircuit />
