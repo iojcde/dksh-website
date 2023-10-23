@@ -35,15 +35,17 @@ const Ohjangwon = () => {
         current = 0;
         await tl.to(".ohjangwon", {
           autoAlpha: 1,
-          delay: 0.5,
         });
+
+        // await tl.to(".hand", { skewX: 10, translateX: -10 });
         await tl.to(".promote-video", {
-          translateY: -150,
-          translateX: 120,
+          translateY: -100,
+          translateX: 150,
           skewX: 100,
-          rotate: 70,
+          rotate: 80,
           scale: 0.5,
         });
+
         document.body.innerHTML = document.body.innerHTML.replaceAll(
           "단대소고",
           "단대부고"
@@ -70,12 +72,20 @@ const Ohjangwon = () => {
   }, []);
 
   return (
-    <Image
-      src="/oh.png"
-      alt=""
-      className="object-fill object-top invisible ohjangwon"
-      fill
-    />
+    <>
+      <Image
+        src="/oh.png"
+        alt=""
+        className="object-fill object-top invisible ohjangwon"
+        fill
+      />
+      <Image
+        src="/oh-hand.png"
+        alt=""
+        className="object-fill hand object-top z-[500] invisible ohjangwon "
+        fill
+      />
+    </>
   );
 };
 export default Ohjangwon;

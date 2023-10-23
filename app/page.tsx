@@ -60,7 +60,7 @@ export default async function Home() {
           </div>
 
           <div className="w-full relative z-20 ">
-            <div className="promote-video overflow-hidden relative z-50 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
+            <div className="promote-video overflow-hidden relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
                   className="absolute  top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"

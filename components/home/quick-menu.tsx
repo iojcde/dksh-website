@@ -1,6 +1,7 @@
 const QuickMenu = async () => {
+  const date = new Date().toISOString().slice(0, 10).replaceAll("-", "");
   const res = await fetch(
-    "https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010137&MLSV_YMD=20231023"
+    `https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010137&MLSV_YMD=${date}`
   );
 
   const data = await res.text();
