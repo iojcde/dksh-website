@@ -92,5 +92,7 @@ caption{
     --dksh-800: 208, 95%, 15%;
     --dksh-900: 208, 95%, 10%;
   
-    @apply selection:bg-sky-9/30
+    @apply selection:bg-sky-9/30;
+
+    cursor: url('/oh-hand.png'),auto;
   }

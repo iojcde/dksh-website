@@ -37,3 +37,4 @@ const QuickMenu = async () => {
   );
 };
 export default QuickMenu;
+export const revalidate = 30;

@@ -76,7 +76,7 @@ const Nav = () => {
         <Link
           id="logo"
           href="/"
-          className={cn(path == "/" && "dark:invert invert-0  ", "select-none")}
+          className={cn(path == "/" && "dark:invert invert-0  ", "select-none logo")}
         >
           <Image
             src="/dksh-logo.png"

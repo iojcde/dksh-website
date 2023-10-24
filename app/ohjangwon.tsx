@@ -40,11 +40,18 @@ const Ohjangwon = () => {
         // await tl.to(".hand", { skewX: 10, translateX: -10 });
         await tl.to(".promote-video", {
           translateY: -100,
-          translateX: 150,
-          skewX: 100,
-          rotate: 80,
+          translateX: 160,
+          skewY: 80,
+          // rotate: 80,
           scale: 0.5,
         });
+
+        await tl.to("#logo", {
+          scale: 3,
+        });
+
+        document.getElementsByTagName("html")[0].style.cursor =
+          "url('/oh-cursor.png'), auto";
 
         document.body.innerHTML = document.body.innerHTML.replaceAll(
           "단대소고",
@@ -54,11 +61,14 @@ const Ohjangwon = () => {
           "단국대학교부속소프트웨어고등학교",
           "단국대학교사범대학부속고등학교"
         );
-
+        console.log(
+          "%c ==> 탁월함을 넘어 감동으로! <== ",
+          "background: #222; color: #bada55; font-size: 30px;"
+        );
         // wait 1s
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 500));
 
-        window.alert("단대부고 개꿀");
+        window.alert("탁월함을 넘어 감동으로");
       }
     };
 

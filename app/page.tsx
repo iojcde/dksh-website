@@ -33,7 +33,7 @@ export default async function Home() {
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl   ">
+            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl bg-clip-text bg-gradient-to-br from-white via-white to-gray-1 text-transparent ">
               단대소고
             </h1>
             <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
@@ -260,6 +260,12 @@ export default async function Home() {
               (대치동 1013, 단국대학교부속소프트웨어고등학교)
             </p>
             div
+          </div>
+
+          <div className="container gap-8 grid grid-cols-3 py-24"> 
+            <h2 className="ending inline-block pb-24 col-span-2 text-4xl  font-extrabold">
+              단대소고에서 역량과 자질을 키우세요!
+            </h2>
           </div>
         </div>
       </div>
