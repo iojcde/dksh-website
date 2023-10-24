@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 hidden sm:block">
       <div className="border-b mb-8">
         <span className="font-bold text-xl inline-block pb-2 px-2 border-b border-dksh-500">
           소개

@@ -1,13 +1,12 @@
- 
- .bien-glass {
-  -webkit-transform:translate3d(0,0,0);
+.bien-glass {
+  -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
   inset: 0;
   /*   Extend the backdrop to the bottom for it to "collect the light" outside of the nav */
-  --extended-by: 80px;
+  --extended-by: 50px;
   bottom: calc(-1 * var(--extended-by));
 
-  --filter: blur(30px) ;
+  --filter: blur(30px);
   -webkit-backdrop-filter: var(--filter);
   backdrop-filter: var(--filter);
   pointer-events: none;
@@ -23,13 +22,13 @@
 }
 
 .bien-glass-edge {
-  -webkit-transform:translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
   z-index: -1;
   left: 0;
   right: 0;
 
-  --extended-by: 60px;
+  --extended-by: 30px;
   --offset: 20px;
   --thickness: 2px;
   height: calc(var(--extended-by) + var(--offset));
@@ -49,8 +48,4 @@
     black var(--offset),
     transparent var(--offset)
   );
-} 
-
-
-
- 
+}
