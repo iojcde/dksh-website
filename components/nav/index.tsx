@@ -266,7 +266,7 @@ const Nav = () => {
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2  ">
                     <ListItem href="">평가계획</ListItem>
 
-                    <ListItem href="">기출문제</ListItem>
+                    <ListItem href="/past-exams">기출문제</ListItem>
 
                     <ListItem href="">수업 운영 계획</ListItem>
                     <ListItem href="">알고리즘 문제풀이</ListItem>

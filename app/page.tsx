@@ -148,11 +148,11 @@ export default async function Home() {
               <span className="flex items-center gap-2">
                 <Library className="stroke-violet-600" />
                 <h2 className="text-xl tracking-tight  font-bold">
-                  전문 교사진
+                  우수한 교사진
                 </h2>
               </span>
               <p className="mt-2">
-                단대소고는 소프트웨어 전문 교사진을 보유하고 있습니다.
+                단대소고는 소프트웨어 우수한 교사진을 보유하고 있습니다.
                 <br />
                 학생들의 진로를 위해 교사들은 끊임없이 노력하고 있습니다.
               </p>
@@ -182,9 +182,8 @@ export default async function Home() {
               <p className="mt-2">
                 단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
                 있습니다.
-                <br />총 21개의 학생들이 자율적으로 개설한 창체동아리가 있으며,
-                학생들은 동아리에서 자신의 능력을 발휘하고 즐겁게 활동할 수
-                있습니다.
+                <br />학생들이 자율적으로 개설한 21개의창체동아리가 있으며,
+                학생들은 동아리에서 자신의 역량을 키우고 진로를 탐색할 수 있습니다.
               </p>
             </div>
           </div>
@@ -253,19 +252,18 @@ export default async function Home() {
             <h1 className="text-3xl font-bold">오시는 길</h1>
             <p className=" text-gray-11 mt-8">
               단대소고는 교육 1번지 강남구 대치동의 중심에 위치해 있습니다.
-              한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학에 용이합니다.
+              한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학이 유리합니다.
             </p>
             <h2 className="font-bold mt-8">세부 주소</h2>
             <p>
               [06278] 서울 강남구 도곡로64길 21 <br />
               (대치동 1013, 단국대학교부속소프트웨어고등학교)
             </p>
-            div
           </div>
 
           <div className="container gap-8 grid grid-cols-3 py-24">
             <h2 className="ending inline-block pb-24 col-span-2 text-4xl  font-extrabold">
-              단대소고에서 역량과 자질을 키우세요!
+              탁월함을 넘어 감동으로!
             </h2>
           </div>
         </div>
