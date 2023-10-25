@@ -17,8 +17,8 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const VerificationEmail = ({ url }) => {
-  const previewText = `Hello, Here's your magic link to sign in to Kaiwa.`;
+export const VerificationEmail = ({ url }: { url: string }) => {
+  const previewText = `단대소고에 로그인하세요.`;
 
   return (
     <Html>
@@ -27,14 +27,12 @@ export const VerificationEmail = ({ url }) => {
       <Tailwind>
         <Body className="mx-auto bg-white font-sans">
           <Container className="mx-auto mb-[40px] max-w-2xl p-[20px]">
-            <Text className="text-lg font-medium">Kaiwa</Text>
+            <Text className="text-xl font-extrabold">단대소고</Text>
 
-            <Heading as="h1" className="text-3xl">
-              Your magic link
-            </Heading>
+            <Heading as="h1" className="text-3xl"></Heading>
             <Text className="text-base leading-[16px]"> Hello,</Text>
             <Text className="text-base">
-              Here&apos;s your magic link to sign in to Kaiwa.
+              아래 링크를 눌러 단대소고에 로그인하세요.
             </Text>
 
             <Button
@@ -43,15 +41,13 @@ export const VerificationEmail = ({ url }) => {
               className="rounded-lg bg-[#000000] font-semibold text-white no-underline"
               href={url}
             >
-              Login to Kaiwa
+              로그인
             </Button>
 
-            <Text className="mt-8">
-              Best,
-              <br /> Kaiwa Team
-            </Text>
+            <Text className="mt-8">단대소고</Text>
             <Text className="mt-8 text-gray-500">
-              If you didn&apos;t try to login, you can safely ignore this email.
+              {/* If you didn&apos;t try to login, you can safely ignore this email. */}
+              로그인 시도를 하지 않았다면, 이 이메일을 무시해 주세요.
             </Text>
           </Container>
           <Hr />

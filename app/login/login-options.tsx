@@ -30,7 +30,7 @@ export const LoginOptions = () => {
               </Label>
               <Input
                 id="email"
-                placeholder="ohjangwon@example.com"
+                placeholder="ohjangwon@dankook.sen.hs.kr"
                 type="email"
                 autoCapitalize="none"
                 autoComplete="email"

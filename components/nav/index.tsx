@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+
 import {
   Backpack,
   CalendarDays,
@@ -34,6 +34,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import React from "react";
+import UserSection from "./user-section";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -49,7 +50,8 @@ const Nav = () => {
       scrollTrigger: {
         trigger: "#hero",
         start: "bottom top+=30px",
-        endTrigger: "html",
+        endTrigger: "#container",
+        scrub: true,
         end: "bottom top",
         onToggle: () => {
           document.getElementById("nav")?.classList.toggle("dark");
@@ -76,7 +78,10 @@ const Nav = () => {
         <Link
           id="logo"
           href="/"
-          className={cn(path == "/" && "dark:invert invert-0  ", "select-none logo")}
+          className={cn(
+            path == "/" && "dark:invert invert-0  ",
+            "select-none logo"
+          )}
         >
           <Image
             src="/dksh-logo.png"
@@ -286,7 +291,7 @@ const Nav = () => {
         </div>
       </div>
       <div className="relative z-[100] flex gap-4 lg:gap-10 items-center">
-        <Link href="/login">로그인</Link>
+        <UserSection />
         <button>
           <Menu />
         </button>

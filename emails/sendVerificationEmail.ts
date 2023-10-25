@@ -6,9 +6,9 @@ export const sendVerificationRequest = async (
 ) => {
   try {
     await resend.emails.send({
-      from: "Kaiwa <auth@kaiwa.jcde.xyz>",
+      from: "단대소고 <dksh@kaiwa.jcde.xyz>",
       to: params.identifier,
-      subject: "Your magic link to sign in to Kaiwa",
+      subject: "단대소고에 로그인하기",
       react: VerificationEmail({ url: params.url }),
     });
   } catch (error) {

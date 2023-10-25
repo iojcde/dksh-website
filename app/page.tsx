@@ -17,14 +17,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { Details } from "./details";
-import Ohjangwon from "./ohjangwon";
+import dynamic from "next/dynamic";
+const Ohjangwon = dynamic(() => import("./ohjangwon"));
 
 export default async function Home() {
   return (
     <>
       <main
         id="hero"
-        className="-mt-12 bg-gradient-to-br flex items-center from-black  to-dksh-900 dark text-gray-12 relative min-h-screen overflow-hidden   pb-24 justify-between w-full  h-full"
+        className="-mt-12 bg-gradient-to-br flex items-center from-black  to-dksh-900 dark text-gray-12 relative min-h-screen overflow-hidden  pb-24 justify-between w-full  h-full"
       >
         <Details />
         <div className="container grid h-full pt-16  grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 ">
@@ -262,7 +263,7 @@ export default async function Home() {
             div
           </div>
 
-          <div className="container gap-8 grid grid-cols-3 py-24"> 
+          <div className="container gap-8 grid grid-cols-3 py-24">
             <h2 className="ending inline-block pb-24 col-span-2 text-4xl  font-extrabold">
               단대소고에서 역량과 자질을 키우세요!
             </h2>

@@ -33,7 +33,7 @@ export default async function LoginPage() {
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-4xl font-extrabold">로그인</h1>
             <p className="text-sm text-muted-foreground">
-              이메일을 입력해 로그인하세요.
+              학교 이메일을 입력해 로그인하세요.
             </p>
           </div>
 

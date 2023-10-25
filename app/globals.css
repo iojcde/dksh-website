@@ -24,6 +24,7 @@
   }
  html{
     @apply overflow-x-clip w-full bg-white dark:bg-black  ;
+    
      
   
   } 

@@ -4,8 +4,9 @@ import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Provider } from "react-wrap-balancer";
+import Providers from "./providers";
 import gsap from "gsap";
+import { cn } from "@/lib/utils";
 
 const pretendard = localFont({
   src: "../fonts/woff2/PretendardVariable.woff2",
@@ -24,11 +25,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={pretendard.className}>
-        <Provider>
-          <Nav /> {children}
-          <Footer />
-        </Provider>
+      <body
+        className={cn(
+          pretendard.className,
+          "fixed bottom-0 top-0 w-full h-full overflow-x-auto min-h-screen"
+        )}
+      >
+        <div id="container">
+          <Providers>
+            <Nav /> {children}
+            <Footer />
+          </Providers>
+        </div>
       </body>
     </html>
   );

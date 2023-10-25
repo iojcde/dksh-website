@@ -46,10 +46,6 @@ const Ohjangwon = () => {
           scale: 0.5,
         });
 
-        await tl.to("#logo", {
-          scale: 3,
-        });
-
         document.getElementsByTagName("html")[0].style.cursor =
           "url('/oh-cursor.png'), auto";
 
@@ -65,10 +61,12 @@ const Ohjangwon = () => {
           "%c ==> 탁월함을 넘어 감동으로! <== ",
           "background: #222; color: #bada55; font-size: 30px;"
         );
+        const song = document.getElementById("schoolsong") as HTMLAudioElement;
+        song.paused ? song.play() : song.pause();
         // wait 1s
         await new Promise((resolve) => setTimeout(resolve, 500));
 
-        window.alert("탁월함을 넘어 감동으로");
+        window.alert("탁월함을 넘어 감동으로!");
       }
     };
 
@@ -83,18 +81,25 @@ const Ohjangwon = () => {
 
   return (
     <>
-      <Image
-        src="/oh.png"
-        alt=""
-        className="object-fill object-top invisible ohjangwon"
-        fill
-      />
-      <Image
-        src="/oh-hand.png"
-        alt=""
-        className="object-fill hand object-top z-[500] invisible ohjangwon "
-        fill
-      />
+      <div className="group">
+        <Image
+          src="/oh.png"
+          alt=""
+          className="object-fill transition group-hover:scale-105 object-top invisible ohjangwon"
+          fill
+        />
+        <Image
+          src="/oh-hand.png"
+          alt=""
+          className="object-fill transition hand group-hover:scale-105 object-top z-[500] invisible ohjangwon "
+          fill
+        />
+      </div>
+      <audio
+        id="schoolsong"
+        src="https://dankook.sen.hs.kr/crosseditor/binary/files/schoolsong/SEI_00001178/schoolSong.mp3"
+        loop
+      ></audio>
     </>
   );
 };

@@ -33,7 +33,11 @@ export const authOptions: NextAuthOptions = {
         },
       });
 
-      if (trigger == "signUp") {
+      if (trigger == "signUp" && !dbUser) {
+        if (!token.email?.endsWith("@dankook.sen.hs.kr")) {
+          throw new Error("Invalid email");
+        }
+
         dbUser = await db.user.create({
           data: {
             email: token.email,
