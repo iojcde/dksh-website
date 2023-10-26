@@ -1,6 +1,6 @@
 import { getSession } from "@/lib/auth";
 import { DishCard } from "./cards/dish";
-import { CalendarCard } from "./cards/Calendar";
+import { CalendarCard } from "./cards/calendar";
 
 const DashboardPage = async () => {
   const session = await getSession();
