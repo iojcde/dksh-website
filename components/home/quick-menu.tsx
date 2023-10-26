@@ -1,7 +1,10 @@
 const QuickMenu = async () => {
   const date = new Date().toISOString().slice(0, 10).replaceAll("-", "");
   const res = await fetch(
-    `https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010137&MLSV_YMD=${date}`
+    `https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010137&MLSV_YMD=${date}`,
+    {
+      next: { revalidate: 3600 },
+    }
   );
 
   const data = await res.text();
@@ -37,4 +40,3 @@ const QuickMenu = async () => {
   );
 };
 export default QuickMenu;
-export const revalidate = 30;

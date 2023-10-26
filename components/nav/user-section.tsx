@@ -1,6 +1,6 @@
 "use client";
 import { CreditCard, LogOut, PlusCircle, Settings, User } from "lucide-react";
-
+import Link from 'next/link'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -84,4 +84,8 @@ export default function UserSection() {
         </DropdownMenuContent>
       </DropdownMenu>
     );
+
+  if (status == "unauthenticated") {
+    return <Link href="/login">로그인</Link>;
+  }
 }

@@ -14,40 +14,32 @@ export function GradeExams({
   data: Record<
     string,
     {
-      hakgi1: {
-        midterm?: {
-          previewUrl: string;
-          downloadUrl: string;
-          subject: string;
-        }[];
-        final: { previewUrl: string; downloadUrl: string; subject: string }[];
-      };
-      hakgi2: {
-        midterm?: {
-          previewUrl: string;
-          downloadUrl: string;
-          subject: string;
-        }[];
-        final: { previewUrl: string; downloadUrl: string; subject: string }[];
-      };
+      midterm: {
+        previewUrl: string;
+        downloadUrl: string;
+        subject: string;
+      }[];
+      final: { previewUrl: string; downloadUrl: string; subject: string }[];
     }
   >;
 }) {
   return (
     <Accordion type="single" collapsible className="w-full">
-      {Object.keys(data).map((year) => {
-        console.log(data[year]);
+      {Object.keys(data).map((yearhakgi) => {
+        const year = yearhakgi.split("-")[0];
+        const hakgi = yearhakgi.split("-")[1];
+
         return (
-          <AccordionItem value={year}>
+          <AccordionItem value={yearhakgi} key={yearhakgi}>
             <AccordionTrigger className="font-bold text-xl">
               {year}년 {hakgi}학기
             </AccordionTrigger>
             <AccordionContent>
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-[0.4fr_1fr] lg:grid-cols-2 gap-8">
                 <h3> 중간고사 </h3>
                 <ul>
-                  {data[year].midterm?.map((exam) => (
-                    <li>
+                  {data[yearhakgi].midterm?.map((exam) => (
+                    <li key={exam.subject}>
                       <h4>{exam.subject}</h4>
                       <div className="flex items-center gap-2">
                         <a href={exam.previewUrl} target="_blank">
@@ -62,8 +54,8 @@ export function GradeExams({
                 </ul>
                 <h3>기말고사</h3>
                 <ul>
-                  {data[year].final.map((exam) => (
-                    <li>
+                  {data[yearhakgi].final.map((exam) => (
+                    <li key={exam.subject}>
                       <h4>{exam.subject}</h4>
                       <div className="flex items-center gap-2">
                         {" "}

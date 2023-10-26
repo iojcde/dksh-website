@@ -131,26 +131,29 @@ const Nav = () => {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/docs" className="flex items-center gap-2 ">
+                    <ListItem
+                      href="/about/departments"
+                      className="flex items-center gap-2 "
+                    >
                       <Shapes className="text-pink-500" />
                       학과 소개
                     </ListItem>
                     <ListItem
-                      href="/docs/installation"
+                      href="/about/greeting"
                       className="flex items-center gap-2 "
                     >
                       <Text className="text-sky-400" />
                       인사말
                     </ListItem>
                     <ListItem
-                      href="/docs/primitives/typography"
+                      href="/about/history"
                       className="flex items-center gap-2 "
                     >
                       <History className="text-teal-400" /> 연혁
                     </ListItem>
 
                     <ListItem
-                      href="/docs/installation"
+                      href="/about/branding"
                       className="flex items-center gap-2 "
                     >
                       <Component className="text-yellow-400" />

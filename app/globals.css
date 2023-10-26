@@ -97,3 +97,13 @@ caption{
 
     cursor: url('/oh-hand.png'),auto;
   }
+
+  .history li {
+    @apply flex gap-6 ;
+  }
+
+  .history li span{
+ 
+      @apply text-black tabular-nums;
+  
+  }

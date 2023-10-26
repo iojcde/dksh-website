@@ -182,8 +182,9 @@ export default async function Home() {
               <p className="mt-2">
                 단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
                 있습니다.
-                <br />학생들이 자율적으로 개설한 21개의창체동아리가 있으며,
-                학생들은 동아리에서 자신의 역량을 키우고 진로를 탐색할 수 있습니다.
+                <br />
+                학생들이 자율적으로 개설한 21개의창체동아리가 있으며, 학생들은
+                동아리에서 자신의 역량을 키우고 진로를 탐색할 수 있습니다.
               </p>
             </div>
           </div>
@@ -261,10 +262,15 @@ export default async function Home() {
             </p>
           </div>
 
-          <div className="container gap-8 grid grid-cols-3 py-24">
-            <h2 className="ending inline-block pb-24 col-span-2 text-4xl  font-extrabold">
+          <div className="container gap-8 w-full py-24 relative">
+            <span className="text-dksh-500 text-sm font-bold">SLOGAN</span>
+            <h2 className="font-extrabold tracking-wide bg-clip-text bg-gradient-to-br from-black to-dksh-500 text-transparent text-6xl mt-2">
               탁월함을 넘어 감동으로!
             </h2>
+            <p className="text-gray-11 mt-8 max-w-prose">
+              단대소고는 학생들이 탁월함을 넘어 감동을 주는 인재로 성장할 수
+              있도록 최선을 다하고 있습니다.
+            </p>
           </div>
         </div>
       </div>

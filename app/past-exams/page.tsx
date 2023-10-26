@@ -39,49 +39,57 @@ export function ExamsSection() {
         <GradeExams
           grade={1}
           data={{
-            2023: {
-              hakgi1: {
-                midterm: [
-                  {
-                    subject: "국어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                  {
-                    subject: "영어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                ],
-                final: [
-                  {
-                    subject: "국어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                ],
-              },
-              hakgi2: {
-                midterm: [
-                  {
-                    subject: "국어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                  {
-                    subject: "영어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                ],
-                final: [
-                  {
-                    subject: "국어",
-                    previewUrl: "",
-                    downloadUrl: "",
-                  },
-                ],
-              },
+            "2023-1": {
+              midterm: [
+                {
+                  subject: "국어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+                {
+                  subject: "영어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+              ],
+              final: [
+                {
+                  subject: "국어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+                {
+                  subject: "영어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+              ],
+            },
+            "2023-2": {
+              midterm: [
+                {
+                  subject: "국어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+                {
+                  subject: "영어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+              ],
+              final: [
+                {
+                  subject: "국어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+                {
+                  subject: "영어",
+                  previewUrl: "",
+                  downloadUrl: "",
+                },
+              ],
             },
           }}
         />
