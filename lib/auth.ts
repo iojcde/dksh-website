@@ -2,8 +2,14 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { NextAuthOptions, getServerSession } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import { db } from "@/lib/db";
 import { sendVerificationRequest } from "@/emails/sendVerificationEmail";
+import type {
+  GetServerSidePropsContext,
+  NextApiRequest,
+  NextApiResponse,
+} from "next";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
@@ -23,6 +29,28 @@ export const authOptions: NextAuthOptions = {
       server: "",
       from: "auth@dksh.jcde.xyz",
       sendVerificationRequest,
+      normalizeIdentifier(identifier: string): string {
+        if (identifier.split("@").length > 2) {
+          throw new Error("Only one email allowed");
+        }
+
+        // Get the first two elements only,
+        // separated by `@` from user input.
+        let [local, domain] = identifier.toLowerCase().trim().split("@");
+        // The part before "@" can contain a ","
+        // but we remove it on the domain part
+        domain = domain.split(",")[0];
+
+        if (domain != "dankook.sen.hs.kr") {
+          throw new Error("Invalid email");
+        }
+
+        return `${local}@${domain}`;
+      },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
   callbacks: {
@@ -75,4 +103,13 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-};
+} satisfies NextAuthOptions;
+
+export function getSession(
+  ...args:
+    | [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]]
+    | [NextApiRequest, NextApiResponse]
+    | []
+) {
+  return getServerSession(...args, authOptions);
+}

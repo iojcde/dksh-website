@@ -28,6 +28,7 @@ for item in items:
     */
 const HistoryPage = () => (
   <div className="container py-24">
+    <span className="text-dksh-500 text-sm font-bold">HISTORY</span>
     <h1 className="font-extrabold text-6xl">연혁</h1>
     <ul className=" text-gray-11 space-y-4 mt-16 history max-w-[85ch]">
       <li>
