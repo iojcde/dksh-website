@@ -107,3 +107,7 @@ caption{
       @apply text-black tabular-nums;
   
   }
+ 
+  .calendar .today{
+    @apply bg-sky-7/30;
+  }

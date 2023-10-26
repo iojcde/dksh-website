@@ -52,7 +52,7 @@ export default async function Home() {
               </Link>
 
               <Link
-                href="https://gall.dcinside.com/mgallery/board/lists/?id=dksw"
+                href="/dashboard"
                 className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-4 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
               >
                 재학생 포털

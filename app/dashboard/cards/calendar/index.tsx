@@ -20,6 +20,7 @@ export const CalendarCard = async () => {
   removeEl(document, "script");
   removeEl(document, ".calendar_top_button");
   removeEl(document, "form[name=searchForm]");
+  removeEl(document,'.cntTitle')
 
 
   return (
@@ -29,7 +30,7 @@ export const CalendarCard = async () => {
       </CardHeader>
       <CardContent>
         <div
-          className="prose prose-sm"
+          className="prose prose-sm max-w-none calendar"
           dangerouslySetInnerHTML={{
             __html: document.querySelector(".calendar_type01")
               ?.innerHTML as string,

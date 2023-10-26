@@ -1,4 +1,4 @@
-import { User } from "next-auth";
+import { User, Profile } from "next-auth";
 import { JWT } from "next-auth/jwt";
 
 declare module "next-auth/jwt" {
@@ -12,5 +12,9 @@ declare module "next-auth" {
     user: User & {
       id: UserId;
     };
+  }
+
+  interface Profile extends Profile {
+    email_verified?: boolean;
   }
 }

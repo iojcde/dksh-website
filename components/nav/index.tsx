@@ -277,11 +277,7 @@ const Nav = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link
-                  href="https://gall.dcinside.com/mgallery/board/lists/?id=dksw"
-                  legacyBehavior
-                  passHref
-                >
+                <Link href="/dashboard" passHref>
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle())}
                   >
