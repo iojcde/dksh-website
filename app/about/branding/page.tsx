@@ -58,6 +58,7 @@ const BrandingPage = () => (
       <div>
         <h2 className="mt-8 text-2xl font-extrabold">교목 - 향나무</h2>
         <Image
+         className="mt-4"
           alt="향나무"
           src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Miryang_juniperus_chinensis.jpg"
           width={450}
@@ -66,7 +67,7 @@ const BrandingPage = () => (
       </div>
       <div>
         <h2 className="mt-8 text-2xl font-extrabold">교화 - 철쭉</h2>
-        <Image alt="철쭉" src="/flower.webp" width={390} height={261} />
+        <Image className="mt-4" alt="철쭉" src="/flower.webp" width={390} height={261} />
       </div>
     </div>
   </div>
