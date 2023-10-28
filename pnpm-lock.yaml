@@ -14,6 +14,9 @@ dependencies:
   '@jsx-email/render':
     specifier: ^1.1.1
     version: 1.1.1
+  '@jsx-email/tailwind':
+    specifier: ^2.4.2
+    version: 2.4.2(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@5.4.2)(next-auth@4.24.3)
@@ -1213,6 +1216,20 @@ packages:
 
   /@jsx-email/tailwind@2.4.1(react@18.2.0):
     resolution: {integrity: sha512-RHfjyTAsk61njkWhWYCKWqIG3VeWSi6RlDDo+a7HDLguTLPiwfMqwRZMKNrb5Pw5MbJRbsI3SQcTdJYR/Cm35g==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      '@jsx-email/render': 1.1.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tw-to-css: 0.0.11
+    transitivePeerDependencies:
+      - ts-node
+    dev: false
+
+  /@jsx-email/tailwind@2.4.2(react@18.2.0):
+    resolution: {integrity: sha512-cT0KBW4EVXL6dV6YhmZDPpoWHRIpgTXuDtirtKxC/1P51NhSkYj4McGKntqDrJS2dS+SVE+U5OzG6kf4zTfQHg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.2.0
