@@ -13,8 +13,7 @@ import {
   Row,
   Section,
   Text,
-} from "@jsx-email/all";
-import { Tailwind } from "@jsx-email/tailwind";
+} from "@react-email/all";
 import * as React from "react";
 
 export const VerificationEmail = ({ url }: { url: string }) => {

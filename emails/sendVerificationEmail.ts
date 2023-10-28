@@ -12,7 +12,7 @@ export const sendVerificationRequest = async (
       from: "단대소고 <dksh@kaiwa.jcde.xyz>",
       to: params.identifier,
       subject: "단대소고에 로그인하기",
-      html: render(VerificationEmail({ url: params.url })),
+      react: VerificationEmail({ url: params.url }),
     });
   } catch (error) {
     console.log({ error });
