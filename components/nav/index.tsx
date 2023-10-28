@@ -26,6 +26,7 @@ import {
 import {
   NavigationMenu,
   NavigationMenuContent,
+  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -277,7 +278,7 @@ const Nav = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/dashboard" passHref>
+                <Link href="/dashboard" passHref legacyBehavior>
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle())}
                   >

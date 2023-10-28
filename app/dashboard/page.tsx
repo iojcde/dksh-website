@@ -1,6 +1,7 @@
 import { getSession } from "@/lib/auth";
 import { DishCard } from "./cards/dish";
 import { CalendarCard } from "./cards/calendar";
+import { TimeTableCard } from "./cards/time-table";
 
 const DashboardPage = async () => {
   const session = await getSession();
@@ -15,8 +16,9 @@ const DashboardPage = async () => {
           안녕하세요, {session?.user.name}님!
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-8 mt-16 container max-w-[85rem]">
+      <div className="flex flex-wrap gap-6 mt-16 container max-w-[85rem]">
         <DishCard />
+        <TimeTableCard />
         <CalendarCard />
       </div>
     </div>

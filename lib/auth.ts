@@ -10,6 +10,7 @@ import type {
   NextApiRequest,
   NextApiResponse,
 } from "next";
+import { is } from "date-fns/locale";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
@@ -54,6 +55,35 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      console.log({ user, account, profile, email, credentials });
+
+      const emails = await fetch("https://api.github.com/user/emails", {
+        headers: {
+          Authorization: `token ${account?.access_token}`,
+        },
+      }).then((res) => res.json());
+
+      let isAllowedToSignIn = false;
+
+      console.log(emails);
+
+      for (const email of emails) {
+        if (email.verified && email.email.endsWith("@dankook.sen.hs.kr")) {
+          isAllowedToSignIn = true;
+          break;
+        }
+      }
+
+      if (isAllowedToSignIn) {
+        return true;
+      } else {
+        // Return false to display a default error message
+        throw new Error("단대소고 이메일로만 로그인할 수 있습니다.");
+        // Or you can return a URL to redirect to:
+        // return '/unauthorized'
+      }
+    },
     async jwt({ token, trigger, user }) {
       let dbUser = await db.user.findFirst({
         where: {
@@ -61,19 +91,7 @@ export const authOptions: NextAuthOptions = {
         },
       });
 
-      if (trigger == "signUp" && !dbUser) {
-        if (!token.email?.endsWith("@dankook.sen.hs.kr")) {
-          throw new Error("Invalid email");
-        }
-
-        dbUser = await db.user.create({
-          data: {
-            email: token.email,
-            name: token.name,
-            image: token.picture,
-          },
-        });
-      } else if (!dbUser) {
+      if (!dbUser) {
         throw new Error("User not found");
       }
 

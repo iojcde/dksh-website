@@ -1,6 +1,9 @@
 import { SendVerificationRequestParams } from "next-auth/providers/email";
 import { resend } from "./resend";
 import { VerificationEmail } from "./verificationEmail";
+
+import { render } from "@jsx-email/render";
+
 export const sendVerificationRequest = async (
   params: SendVerificationRequestParams
 ) => {
@@ -9,7 +12,7 @@ export const sendVerificationRequest = async (
       from: "단대소고 <dksh@kaiwa.jcde.xyz>",
       to: params.identifier,
       subject: "단대소고에 로그인하기",
-      react: VerificationEmail({ url: params.url }),
+      html: render(VerificationEmail({ url: params.url })),
     });
   } catch (error) {
     console.log({ error });

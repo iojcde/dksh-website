@@ -14,7 +14,7 @@ import {
   Section,
   Tailwind,
   Text,
-} from "@react-email/components";
+} from "@jsx-email/all";
 import * as React from "react";
 
 export const VerificationEmail = ({ url }: { url: string }) => {
@@ -30,7 +30,7 @@ export const VerificationEmail = ({ url }: { url: string }) => {
             <Text className="text-xl font-extrabold">단대소고</Text>
 
             <Heading as="h1" className="text-3xl"></Heading>
-            <Text className="text-base leading-[16px]"> Hello,</Text>
+            <Text className="text-base leading-[16px]"> 안녕하세요,</Text>
             <Text className="text-base">
               아래 링크를 눌러 단대소고에 로그인하세요.
             </Text>

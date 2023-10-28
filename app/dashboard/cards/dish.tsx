@@ -24,7 +24,7 @@ export const DishCard = async () => {
   const dish = match ? match[1] : null;
 
   return (
-    <Card className="col-span-1">
+    <Card  className="sm:max-w-xs w-full">
       <CardHeader>
         <div className="rounded-full text-white mb-1 bg-pink-500 p-2 aspect-square max-w-min">
           <Utensils />
