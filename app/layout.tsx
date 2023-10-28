@@ -27,7 +27,8 @@ export default function RootLayout({
       <body className={cn(pretendard.className)}>
         <div id="container">
           <Providers>
-            <Nav /> {children}
+            <Nav />
+             {children}
             <Footer />
           </Providers>
         </div>

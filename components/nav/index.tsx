@@ -302,28 +302,20 @@ const Nav = () => {
 
               if (mobileNav?.classList.contains("active")) {
                 gsap.to(mobileNav, {
-                  x: "105vw",
+                  x: "150vw",
                   ease: "power3.out",
                 });
-                if (!nav?.classList.contains("was-dark"))
-                  nav?.classList.remove("dark");
-                nav?.classList.remove("was-dark");
               } else {
                 gsap.to(mobileNav, {
                   x: 0,
                   ease: "power3.out",
                 });
-
-                if (nav?.classList.contains("dark"))
-                  nav?.classList.add("was-dark");
-
-                nav?.classList.add("dark");
               }
 
               document
                 .querySelector("#mobile-nav .logo")
                 ?.classList.toggle("hidden");
-              document.querySelector("#mobile-nav")?.classList.toggle("active");
+              mobileNav?.classList.toggle("active");
               document
                 .querySelector("html")
                 ?.classList.toggle("overflow-hidden");

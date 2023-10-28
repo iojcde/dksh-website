@@ -1,4 +1,3 @@
- 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradeExams } from "./exams";
 
@@ -7,7 +6,7 @@ const PastExamsPage = () => {
     <div className="container py-24">
       <h1 className="font-extrabold text-4xl">기출문제</h1>
 
-      <p className="mt-2">단대소고의 기출문제를 모아놓은 페이지입니다.</p>
+      <p className="mt-2">단대소고의 역대 기출문제를 모아놓은 페이지입니다.</p>
       <ExamsSection />
     </div>
   );

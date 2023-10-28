@@ -13,9 +13,9 @@ export const MobileNav = () => {
   return (
     <div
       id="mobile-nav"
-      className=" p-6 dark bg-black pt-3 z-[200] fixed inset-0 translate-x-[150vw] w-full md:hidden"
+      className=" p-6 dark bg-black pt-3 z-[200] fixed flex flex-col justify-between inset-0 translate-x-[150vw] w-full md:hidden"
     >
-      <div className="flex  h-[24px]">
+      <div className="flex  h-[24px] ">
         <Link href="/" className="invert logo hidden select-none ">
           <Image
             className="h-[24px] w-[55px]"
@@ -30,26 +30,17 @@ export const MobileNav = () => {
           className="flex justify-end flex-1"
           onClick={() => {
             const mobileNav = document.querySelector("#mobile-nav");
-            const nav = document.querySelector("#nav");
 
             if (mobileNav?.classList.contains("active")) {
               gsap.to(mobileNav, {
-                x: "105vw",
+                x: "150vw",
                 ease: "power3.out",
               });
-              if (!nav?.classList.contains("was-dark"))
-                nav?.classList.remove("dark");
-              nav?.classList.remove("was-dark");
             } else {
               gsap.to(mobileNav, {
                 x: 0,
                 ease: "power3.out",
               });
-
-              if (nav?.classList.contains("dark"))
-                nav?.classList.add("was-dark");
-
-              nav?.classList.add("dark");
             }
 
             document
@@ -63,11 +54,11 @@ export const MobileNav = () => {
         </button>
       </div>
 
-      <div className="text-gray-12 mt-8">
+      <div className="text-gray-12 mt-8 pb-24">
         <h1 className="uppercase text-sm text-dksh-200 font-bold tracking-wide">
           Navigation
         </h1>{" "}
-        <Accordion type="single" collapsible className="w-full mt-8">
+        <Accordion type="single" collapsible className="w-full mt-4">
           <Item
             title="소개"
             data={[
@@ -90,88 +81,7 @@ export const MobileNav = () => {
               },
             ]}
           />
-          {/* <NavigationMenuTrigger>학교생활</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] font-medium md:w-[450px] gap-1 p-6 grid-cols-[0.8fr_1fr]">
-                      <li className="row-span-6 flex justify-end flex-col border-r p-3 mr-3">
-                        <div className="mb-2 mt-4 text-xl font-extrabold">
-                          학교생활
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          학교생활 관련 자료
-                        </p>
-                      </li>
-                      <ListItem
-                        href="/gatongs"
-                        className="flex items-center gap-2 "
-                      >
-                        <FileText className="text-gray-11" size={16} />
-                        가정통신문
-                      </ListItem>
-                      <ListItem
-                        href="/notices"
-                        className="flex items-center gap-2 "
-                      >
-                        <Megaphone className="text-gray-11" size={16} />
-                        공지사항
-                      </ListItem>
 
-                      <ListItem
-                        href="/accpetance"
-                        className="flex items-center gap-2 "
-                      >
-                        <Utensils className="text-gray-11" size={16} />
-                        급식 메뉴
-                      </ListItem>
-
-                      <ListItem
-                        href="/rules-and-layout"
-                        className="flex items-center gap-2 "
-                      >
-                        <File className="text-gray-11" size={16} />
-                        일반자료실
-                      </ListItem>
-                      <ListItem
-                        href="/rules-and-layout"
-                        className="flex items-center gap-2 "
-                      >
-                        <CalendarDays className="text-gray-11" size={16} />
-                        학사일정
-                      </ListItem>
-                      <ListItem
-                        href="/rules-and-layout"
-                        className="flex items-center gap-2 "
-                      >
-                        <Backpack className="text-gray-11" size={16} />
-                        방과후학교
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>입학과 진학</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2  ">
-                      <li className="row-span-6 flex justify-end flex-col border-r p-3 mr-3">
-                        <div className="mb-2 mt-4 text-xl font-extrabold">
-                          입학과 진학
-                        </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          학교생활 관련 자료
-                        </p>
-                      </li>
-                      <ListItem href="/accpetance">합격자 조회</ListItem>
-
-                      <ListItem href="/accpetance">입학 안내</ListItem>
-                      <ListItem
-                        href="/accpetance"
-                        className="flex items-center gap-2 "
-                      >
-                        진학자료실
-                      </ListItem>
-                    </ul>
-                  </NavigationMenuContent> */}
           <Item
             title="학교생활"
             data={[
@@ -215,6 +125,27 @@ export const MobileNav = () => {
               {
                 title: "진학자료실",
                 href: "/accpetance",
+              },
+            ]}
+          />
+          <Item
+            title="수업과 평가"
+            data={[
+              {
+                title: "평가계획",
+                href: "/acceptance",
+              },
+              {
+                title: "기출문제",
+                href: "/past-exams",
+              },
+              {
+                title: "수업 운영 계획",
+                href: "/acceptance",
+              },
+              {
+                title: "알고리즘 문제풀이",
+                href: "/acceptance",
               },
             ]}
           />

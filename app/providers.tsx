@@ -8,7 +8,14 @@ import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 const Providers = ({ children }: { children: ReactNode }) => (
   <BalancerProvider>
     <SessionProvider refetchInterval={5 * 60}>
-      <ProgressBar color="#056cc7" options={{ showSpinner: false }} />
+      <ProgressBar
+        style=""
+        color="#056cc7"
+        options={{
+          showSpinner: false,
+          speed: 10000,
+        }}
+      />
       {children}
     </SessionProvider>
   </BalancerProvider>
