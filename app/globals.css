@@ -93,4 +93,7 @@ caption {
     margin-right: 0 !important;
   }
 }
- 
+#nprogress {
+  position: relative !important;
+  z-index: 9999999 !important;
+}
