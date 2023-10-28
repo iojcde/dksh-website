@@ -85,6 +85,7 @@ const Ohjangwon = () => {
         <Image
           src="/oh.png"
           alt=""
+          style={{ filter: "url(#ambilight)" }}
           className="object-fill transition group-hover:scale-105 object-top invisible ohjangwon"
           fill
         />
