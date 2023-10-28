@@ -66,7 +66,7 @@ export function Details() {
         <path stroke="#161616" d="M658.5 0L658.5 89"></path>
         <path fill="#161616" d="M267 97a1 1 0 002 0h-2zm0-97v97h2V0h-2z"></path>
         <path stroke="#161616" d="M229.973 66.5L267.027 66.5"></path>
-        <g filter="url(#filter0_d_18_30)">
+        <g>
           <path
             fill="#181818"
             d="M213 54a3 3 0 013-3h11a3 3 0 013 3v16a3 3 0 01-3 3h-11a3 3 0 01-3-3V54z"
@@ -211,35 +211,6 @@ export function Details() {
         <path stroke="#161616" d="M1376 478.5L1526 478.5"></path>
       </g>
       <defs>
-        <filter
-          id="filter0_d_18_30"
-          width="25"
-          height="30.25"
-          x="209"
-          y="50.75"
-          colorInterpolationFilters="sRGB"
-          filterUnits="userSpaceOnUse"
-        >
-          <feFlood result="BackgroundImageFix"></feFlood>
-          <feColorMatrix
-            in="SourceAlpha"
-            result="hardAlpha"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          ></feColorMatrix>
-          <feOffset dy="4"></feOffset>
-          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-          <feComposite in2="hardAlpha" operator="out"></feComposite>
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-          <feBlend
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_18_30"
-          ></feBlend>
-          <feBlend
-            in="SourceGraphic"
-            in2="effect1_dropShadow_18_30"
-            result="shape"
-          ></feBlend>
-        </filter>
         <filter
           id="filter1_d_18_30"
           width="16"

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-const BrandingPage = () => (
+const SymbolsPage = () => (
   <div className="container max-w-6xl py-24">
     <span className="text-dksh-500 text-sm font-bold">SYMBOLS</span>
     <h1 className="text-6xl font-extrabold mt-2">학교 상징</h1>
@@ -73,4 +73,4 @@ const BrandingPage = () => (
   </div>
 );
 
-export default BrandingPage;
+export default SymbolsPage;

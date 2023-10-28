@@ -109,7 +109,7 @@ export const TimeTableCard = async () => {
           </thead>
           <tbody>
             {[...Array(7)].map((_, i) => (
-              <tr key={i}>
+              <tr key={`${i}교시`}>
                 <th className="text-xs">{i + 1}교시</th>
                 {[...Array(5)].map((_, j) => (
                   <td

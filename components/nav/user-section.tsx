@@ -26,7 +26,7 @@ export default function UserSection() {
     return (
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="outline-none">
-          <Avatar className="h-8 w-8 select-none ">
+          <Avatar className="h-8 w-8 select-none border">
             <AvatarImage
               src={session?.user.image as string}
               alt={session?.user.name || session.user.email!}

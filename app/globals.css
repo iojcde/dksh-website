@@ -1,15 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-	font-family: 'Pretendard Variable';
-	font-weight: 45 920;
-	font-style: normal;
-	font-display: swap;
-	src: url('../fonts/woff2/PretendardVariable.woff2') format('woff2-variations');
-}
-
+ 
 
 @layer base {
  
@@ -23,7 +15,8 @@
      
   }
  html{
-    @apply overflow-x-clip w-full bg-white dark:bg-black  ;
+    scrollbar-gutter: stable;
+    
     
      
   
@@ -63,7 +56,9 @@ caption{
 .flag_notice{
   @apply text-dksh-400 font-bold whitespace-nowrap 
 }
- 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
  
  
  
@@ -93,7 +88,7 @@ caption{
     --dksh-800: 208, 95%, 15%;
     --dksh-900: 208, 95%, 10%;
   
-    @apply selection:bg-sky-9/30;
+    @apply selection:bg-sky-9/30 overflow-x-clip w-full bg-white dark:bg-black   ;;
 
     cursor: url('/oh-hand.png'),auto;
   }
@@ -110,4 +105,10 @@ caption{
  
   .calendar .today{
     @apply bg-sky-7/30;
+  }
+
+  @supports (scrollbar-gutter: stable) {
+    html body {
+      margin-right: 0 !important;
+    }
   }

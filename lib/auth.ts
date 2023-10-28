@@ -19,7 +19,6 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: "/login",
-    verifyRequest: "/auth/verify-request",
   },
   providers: [
     GithubProvider({
@@ -56,23 +55,20 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      console.log({ user, account, profile, email, credentials });
-
-      const emails = await fetch("https://api.github.com/user/emails", {
-        headers: {
-          Authorization: `token ${account?.access_token}`,
-        },
-      }).then((res) => res.json());
-
       let isAllowedToSignIn = false;
 
-      console.log(emails);
-
-      for (const email of emails) {
-        if (email.verified && email.email.endsWith("@dankook.sen.hs.kr")) {
-          isAllowedToSignIn = true;
+      switch (account?.provider) {
+        case "google":
+          if (user.email?.endsWith("@dankook.sen.hs.kr")) {
+            isAllowedToSignIn = true;
+          }
           break;
-        }
+
+        case "email":
+          if (user.email?.endsWith("@dankook.sen.hs.kr")) {
+            isAllowedToSignIn = true;
+          }
+          break;
       }
 
       if (isAllowedToSignIn) {

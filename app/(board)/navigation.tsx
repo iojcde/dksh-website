@@ -13,7 +13,7 @@ const BoardNavigation = ({ boardName }: { boardName: string }) => {
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
         <Link
           href={`/${boardName}/${i}`}
-          key={i}
+          key={'wow'  + i}
           className={cn(
             "border-t-2  p-4 -mt-[1px] border-transparent transition-colors hover:border-gray-8",
             pathname.endsWith(i.toString()) &&

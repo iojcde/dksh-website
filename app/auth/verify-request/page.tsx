@@ -1,7 +1,18 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { getSession } from "@/lib/auth";
 import { Mail } from "lucide-react";
+import { redirect } from "next/navigation";
 
-const VerifyRequestPage = () => {
+const VerifyRequestPage = ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) => {
+  if (!searchParams) {
+    redirect("/login");
+  }
+
   return (
     <div className="container py-24 text-center">
       <div className="mx-auto flex items-center p-2 rounded-full justify-center bg-pink-500 aspect-square max-w-min text-white">
@@ -13,8 +24,12 @@ const VerifyRequestPage = () => {
       </p>
 
       <Button asChild className="mt-16">
-        
-        <a  href="https://mail.google.com" target="_blank">Gmail로 바로가기</a>
+        <a
+          href={`https://mail.google.com/mail/u/${searchParams.email}`}
+          target="_blank"
+        >
+          Gmail로 바로가기
+        </a>
       </Button>
     </div>
   );

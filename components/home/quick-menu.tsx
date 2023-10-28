@@ -20,7 +20,7 @@ const QuickMenu = async () => {
         <div className="flex items-center container justify-center w-full  pb-2">
           <div className="w-full hidden md:block">
             <span className="font-bold mr-4  ">최근 학교소식</span>
-            <span>망상하지 마세요.</span>
+            <span>[교무] 2023학년도 건강체력교실 운영 안내</span>
           </div>
 
           <div className="seperator h-8 w-1 border-white" />
@@ -31,7 +31,7 @@ const QuickMenu = async () => {
               {dish
                 ?.replaceAll("<br/>", "")
                 .replaceAll(/\(.*?\)/g, "")
-                .replaceAll(/☆|★/g, "")}
+                .replaceAll(/☆|★/g, "") || "오늘은 급식이 없습니다."}
             </div>
           </div>
         </div>

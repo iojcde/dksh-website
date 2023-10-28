@@ -4,6 +4,9 @@ const colors = createPlugin({
 });
 const alias = colors.alias;
 const config = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   darkMode: "class",
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
@@ -53,7 +56,7 @@ const config = {
         },
         accent: {
           // DEFAULT: `${alias("gray", 3)}/80`,
-          DEFAULT: "rgb(var(--gray3) / 0.8)",
+          DEFAULT: "rgb(var(--gray2) / 0.8)",
           foreground: alias("gray", 12),
         },
         popover: {

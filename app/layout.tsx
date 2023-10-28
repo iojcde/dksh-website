@@ -5,9 +5,8 @@ import Nav from "@/components/nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Providers from "./providers";
-import gsap from "gsap";
 import { cn } from "@/lib/utils";
-
+ 
 const pretendard = localFont({
   src: "../fonts/woff2/PretendardVariable.woff2",
   display: "swap",
@@ -25,12 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          pretendard.className,
-          "fixed bottom-0 top-0 w-full h-full overflow-x-auto min-h-screen"
-        )}
-      >
+      <body className={cn(pretendard.className)}>
         <div id="container">
           <Providers>
             <Nav /> {children}
