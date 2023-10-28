@@ -11,9 +11,9 @@ export const AmbientLight = () => (
       <feOffset in="SourceGraphic" result="source-copy" />
 
       <feComponentTransfer in="source-copy" result="wow">
-        <feFuncR type="linear" slope="0.8" />
-        <feFuncG type="linear" slope="0.8" />
-        <feFuncB type="linear" slope="0.8" />
+        <feFuncR type="linear" slope="0.9" />
+        <feFuncG type="linear" slope="0.9" />
+        <feFuncB type="linear" slope="0.9" />
       </feComponentTransfer>
 
       <feColorMatrix
@@ -38,7 +38,7 @@ export const AmbientLight = () => (
         radius="10"
         result="spread"
       />
-      <feGaussianBlur in="spread" stdDeviation="40" result="ambilight-light" />
+      <feGaussianBlur in="spread" stdDeviation="50" result="ambilight-light" />
 
       <feOffset in="SourceGraphic" result="source" />
 

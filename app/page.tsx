@@ -77,8 +77,8 @@ export default async function Home() {
               </div>
             </div>
 
+            <AmbientLight />
             <Ohjangwon />
-            
           </div>
         </div>
         <QuickMenu />
@@ -281,7 +281,6 @@ export default async function Home() {
           최선을 다하고 있습니다.
         </p>
       </div>
-      <AmbientLight />
     </>
   );
 }
