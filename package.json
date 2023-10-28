@@ -43,6 +43,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-email/components": "0.0.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/jsdom": "^21.1.4",
     "@upstash/redis": "^1.23.4",

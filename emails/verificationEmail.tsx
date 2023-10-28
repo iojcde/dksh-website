@@ -11,9 +11,10 @@ import {
   Link,
   Preview,
   Row,
+  Tailwind,
   Section,
   Text,
-} from "@react-email/all";
+} from "@react-email/components";
 import * as React from "react";
 
 export const VerificationEmail = ({ url }: { url: string }) => {
