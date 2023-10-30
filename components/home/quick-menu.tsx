@@ -2,7 +2,7 @@ import { getMeal } from "@/actions/meal/get-meal";
 import { Suspense } from "react";
 
 const QuickMenu = async () => {
-  const dish = await getMeal();
+  const { meal } = await getMeal();
   return (
     <div className="quick-menu absolute bottom-0 z-20 inset-x-0 text-xs border-b border-gray-7 sm:text-sm text-gray-11">
       <div>
@@ -18,7 +18,7 @@ const QuickMenu = async () => {
             <div className="font-bold mr-4">오늘의 급식</div>
 
             <div className="tracking-wide mt-1 sm:mt-0">
-              {typeof dish === "string" ? dish : dish?.join(" ")}
+              {typeof meal === "string" ? meal : meal?.join(" ")}
             </div>
           </div>
         </div>

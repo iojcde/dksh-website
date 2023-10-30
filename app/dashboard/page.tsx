@@ -1,11 +1,13 @@
 import { getSession } from "@/lib/auth";
-import { DishCard } from "./cards/meal";
+import { MealCard } from "./cards/meal";
 import { CalendarCard } from "./cards/calendar";
 import { TimeTableCard } from "./cards/time-table";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Settings } from "lucide-react";
+import { Suspense } from "react";
+import { Card } from "@/components/ui/card";
 
 const DashboardPage = async () => {
   const session = await getSession();
@@ -34,7 +36,9 @@ const DashboardPage = async () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-6 mt-16 container max-w-[85rem]">
-        <DishCard />
+        <Suspense fallback={<MealCard.loader />}>
+          <MealCard />
+        </Suspense>
         <TimeTableCard />
         <CalendarCard />
       </div>

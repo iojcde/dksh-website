@@ -111,10 +111,10 @@ const Nav = () => {
                             <Image
                               src="/dksh.webp"
                               fill
-                              className="brightness-[65%] object-cover object-right"
+                              className="brightness-[65%] object-cover object-right relative z-10"
                               alt=""
                             />
-                            <div className="absolute inset-0 backdrop-blur-[1px] rounded-sm bg-gray-7" />
+                            <div className="absolute inset-0 backdrop-blur-[1px] rounded-sm bg-gray-12" />
                             <div className=" relative z-20  w-full h-full flex flex-col justify-end">
                               <Image
                                 alt=""

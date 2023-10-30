@@ -8,11 +8,11 @@ import {
 } from "@/components/ui/card";
 import { Utensils } from "lucide-react";
 
-export const DishCard = async () => {
-  const meal = await getMeal();
+export const MealCard = async () => {
+  const { meal, img } = await getMeal();
 
   return (
-    <Card className="sm:max-w-xs w-full">
+    <Card className="sm:max-w-sm w-full">
       <CardHeader>
         <div className="rounded-full text-white mb-1 bg-pink-500 p-2 aspect-square max-w-min">
           <Utensils />
@@ -27,18 +27,28 @@ export const DishCard = async () => {
           급식
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex gap-8 items-start">
         <p className=" leading-8 text-lg font-medium">
           {typeof meal === "string"
             ? meal
             : meal?.map((d) => (
-                <div key={d}>
+                <span key={d}>
                   {d}
                   <br />
-                </div>
+                </span>
               ))}
         </p>
+
+        {img && (
+          <img
+            className="rounded-md w-48 overflow-clip object-cover"
+            src={img}
+            alt=""
+          />
+        )}
       </CardContent>
     </Card>
   );
 };
+
+MealCard.loader = () => <Card className="sm:max-w-sm w-full" />;

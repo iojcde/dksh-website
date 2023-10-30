@@ -1,7 +1,16 @@
 import { JSDOM } from "jsdom";
 
-export const getMeal = async () => {
-  let dish: string | string[] = "급식 정보가 없습니다.";
+export const getMeal = async (): Promise<{
+  meal: string[] | string;
+  img: string | null;
+}> => {
+  let dish: {
+    meal: string[] | string;
+    img: string | null;
+  } = {
+    meal: "급식 정보가 없습니다.",
+    img: null,
+  };
 
   const res = await fetch("https://dankook.sen.hs.kr/175819/subMenu.do", {
     body: "viewType=list&siteId=SEI_00001178&pageIndex=2&arrMlsvId=0&srhMlsvYear=2023&srhMlsvMonth=10",
@@ -24,11 +33,13 @@ export const getMeal = async () => {
 
   for (const tr of trs) {
     if (tr.querySelector("td:first-child")?.textContent?.trim() == today) {
-      const anchor = tr.querySelector("td:nth-child(3) a")?.outerHTML as string;
+      const anchor = tr
+        .querySelector("td:nth-child(3) a")
+        ?.getAttribute("onclick") as string;
 
       const tmpId = anchor.match(/\('(\d+)'\)/);
       if (!tmpId) {
-        return;
+        return dish;
       }
 
       const id = tmpId[1];
@@ -54,7 +65,13 @@ export const getMeal = async () => {
         .split("\n");
 
       if (tmpdish) {
-        dish = tmpdish.map((d) => d.trim());
+        dish.meal = tmpdish.map((d) => d.trim());
+      }
+
+      const img = popupDocument.querySelector("img")?.getAttribute("src");
+
+      if (img) {
+        dish.img = "https://dankook.sen.hs.kr" + img;
       }
     }
   }

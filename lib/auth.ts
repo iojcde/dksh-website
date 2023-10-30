@@ -10,6 +10,7 @@ import type {
   NextApiRequest,
   NextApiResponse,
 } from "next";
+import { JWT } from "next-auth/jwt";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
@@ -113,7 +114,7 @@ export const authOptions: NextAuthOptions = {
         name: dbUser.name,
         email: dbUser.email,
         image: dbUser.image,
-      };
+      } satisfies JWT;
     },
     async session({ session, token }) {
       session.user = token;
