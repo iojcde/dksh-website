@@ -1,6 +1,6 @@
 const GreetingPage = () => (
-  <div className="prose mt-8">
-    <h1> 인사말</h1>
+  <div className="prose container py-20 mt-8">
+    <h1 className="font-extrabold"> 인사말</h1>
     <p>
       안녕하세요? 우리 학교 홈페이지를 방문해주셔서 감사합니다. 저는 2023년 9월
       1일 자로 단국대학교부속소프트웨어고등학교 교장직무대리 직함을 맡은

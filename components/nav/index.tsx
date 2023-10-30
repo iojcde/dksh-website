@@ -114,7 +114,7 @@ const Nav = () => {
                               className="brightness-[65%] object-cover object-right"
                               alt=""
                             />
-                            <div className="absolute inset-0 backdrop-blur-[1px] rounded-sm" />
+                            <div className="absolute inset-0 backdrop-blur-[1px] rounded-sm bg-gray-7" />
                             <div className=" relative z-20  w-full h-full flex flex-col justify-end">
                               <Image
                                 alt=""

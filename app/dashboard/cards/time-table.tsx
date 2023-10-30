@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getSession } from "@/lib/auth";
 import convert from "xml-js";
 
 function convertToDate(dateString: string) {
@@ -17,7 +18,9 @@ function getNextMonday() {
   let nextMonday;
 
   // If today is Sunday (0) or Saturday (6)
-  if (day === 0 || day === 6) {
+  if (day == 1) {
+    nextMonday = today;
+  } else if (day === 0 || day === 6) {
     nextMonday = new Date(
       today.getFullYear(),
       today.getMonth(),
@@ -47,6 +50,13 @@ const replaceArray: Record<string, string> = {
 };
 
 export const TimeTableCard = async () => {
+  const session = await getSession();
+
+  const grade = session?.user?.grade;
+  const _class = session?.user?.class;
+
+  if (!grade || !_class) return null;
+
   const monday = getNextMonday().toISOString().slice(0, 10).replaceAll("-", "");
 
   const friday = new Date(
@@ -57,7 +67,7 @@ export const TimeTableCard = async () => {
     .replaceAll("-", "");
 
   const res = await fetch(
-    `https://open.neis.go.kr/hub/hisTimetable?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7011489&AY=2023&TI_FROM_YMD=${monday}&TI_TO_YMD=${friday}&GRADE=1&CLASS_NM=3&KEY=db0fd655b1eb4b6bb43edcf250d4b9d1`,
+    `https://open.neis.go.kr/hub/hisTimetable?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7011489&AY=2023&TI_FROM_YMD=${monday}&TI_TO_YMD=${friday}&GRADE=${grade}&CLASS_NM=${_class}&KEY=db0fd655b1eb4b6bb43edcf250d4b9d1`,
     {
       next: { revalidate: 3600 },
     }
@@ -71,7 +81,7 @@ export const TimeTableCard = async () => {
   });
 
   let classes = new Array(5).fill("").map(() => new Array(7).fill(""));
-  console.log("length", json.hisTimetable.row.length);
+
   json.hisTimetable.row.forEach(
     (item: {
       ALL_TI_YMD: { _cdata: string };
@@ -97,7 +107,7 @@ export const TimeTableCard = async () => {
         <CardTitle>시간표</CardTitle>
       </CardHeader>
       <div className="pt-0 p-2 sm:p-4">
-        <table className=" prose-th:first:px-2 prose-td:border w-full prose-td:last:pr-4 prose prose-sm prose-td:text-center max-w-none">
+        <table className=" prose-th:first:px-2 prose-td:font-medium prose-td:border w-full prose-td:last:pr-4 prose prose-sm prose-td:text-center max-w-none">
           <thead>
             <tr>
               {["교시", "월", "화", "수", "목", "금"].map((d) => (
@@ -113,7 +123,7 @@ export const TimeTableCard = async () => {
                 <th className="text-xs">{i + 1}교시</th>
                 {[...Array(5)].map((_, j) => (
                   <td
-                    className={today == j ? "bg-pink-200" : ""}
+                    className={today == j ? "bg-yellow-2" : ""}
                     key={`${i}-${j}`}
                   >
                     {classes[j][i]}

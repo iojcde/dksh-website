@@ -10,7 +10,6 @@ import type {
   NextApiRequest,
   NextApiResponse,
 } from "next";
-import { is } from "date-fns/locale";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
@@ -25,9 +24,14 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     }),
-    EmailProvider({
-      server: "",
+    {
+      id: "email",
+      type: "email",
+      maxAge: 24 * 60 * 60,
+      name: "Email",
       from: "auth@dksh.jcde.xyz",
+      options: {},
+      server: null,
       sendVerificationRequest,
       normalizeIdentifier(identifier: string): string {
         if (identifier.split("@").length > 2) {
@@ -47,7 +51,7 @@ export const authOptions: NextAuthOptions = {
 
         return `${local}@${domain}`;
       },
-    }),
+    },
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
@@ -80,7 +84,7 @@ export const authOptions: NextAuthOptions = {
         // return '/unauthorized'
       }
     },
-    async jwt({ token, trigger, user }) {
+    async jwt({ token, session, trigger }) {
       let dbUser = await db.user.findFirst({
         where: {
           email: token.email,
@@ -90,30 +94,29 @@ export const authOptions: NextAuthOptions = {
       if (!dbUser) {
         throw new Error("User not found");
       }
-
-      // if (!dbUser) {
-      //   if (user) {
-      //     token.id = user?.id;
-      //     token.wsToken =
-      //   }
-      //   return token;
-      // }
+      if (trigger == "update") {
+        dbUser = await db.user.update({
+          where: {
+            id: dbUser.id,
+          },
+          data: {
+            grade: parseInt(session.grade),
+            class: parseInt(session.class),
+          },
+        });
+      }
 
       return {
         id: dbUser.id,
+        class: dbUser.class,
+        grade: dbUser.grade,
         name: dbUser.name,
         email: dbUser.email,
-        picture: dbUser.image,
+        image: dbUser.image,
       };
     },
-    async session({ token, session }) {
-      if (token) {
-        session.user.id = token.id;
-        session.user.name = token.name;
-        session.user.email = token.email;
-        session.user.image = token.picture;
-      }
-
+    async session({ session, token }) {
+      session.user = token;
       return session;
     },
   },

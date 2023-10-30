@@ -1,6 +1,6 @@
 "use client";
 import { CreditCard, LogOut, PlusCircle, Settings, User } from "lucide-react";
-import Link from 'next/link'
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,7 +31,9 @@ export default function UserSection() {
               src={session?.user.image as string}
               alt={session?.user.name || session.user.email!}
             />
-            <AvatarFallback>{session.user.email}</AvatarFallback>
+            <AvatarFallback>
+              <div className="h-8 w-8 animate-pulse bg-gray-5 rounded-full" />
+            </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
         <DropdownMenuContent

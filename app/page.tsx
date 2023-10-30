@@ -1,7 +1,6 @@
 import Outline from "@/components/home/outline";
 import QuickMenu from "@/components/home/quick-menu";
-import Nav from "@/components/nav";
-import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
 import {
   School,
   Cpu,
@@ -63,14 +62,11 @@ export default async function Home() {
           </div>
 
           <div className="w-full relative z-20 ">
-            <div
-              style={{ filter: "url(#ambilight)" }}
-              className="promote-video  relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  "
-            >
+            <div className="promote-video ambilight relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
                   className="absolute  top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
-                  src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1"
+                  src="https://www.youtube.com/embed/8wrRpArJJ8I?si=vGB7VFqldKZseDR8&autoplay=1&mute=1&loop=1&modestbranding=1"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
@@ -79,9 +75,19 @@ export default async function Home() {
 
             <AmbientLight />
             <Ohjangwon />
+
+            <Image
+              alt=""
+              src="/blob.png"
+              className="-top-[35%] scale-[105%] -rotate-45 blur-3xl inset-x-0 absolute xl:hidden"
+              width={800}
+              height={800}
+            />
           </div>
         </div>
-        <QuickMenu />
+        <Suspense>
+          <QuickMenu />
+        </Suspense>
       </main>
       <div className="bg-gradient-to-br  relative shadow-inner from-white via-white to-dksh-25 ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
@@ -172,7 +178,7 @@ export default async function Home() {
               단대소고는 학생들이 직접 만들고 이끄는 동아리 시스템을 운영하고
               있습니다.
               <br />
-              학생들이 자율적으로 개설한 21개의창체동아리가 있으며, 학생들은
+              학생들이 자율적으로 개설한 21개의 창체동아리가 있으며, 학생들은
               동아리에서 자신의 역량을 키우고 진로를 탐색할 수 있습니다.
             </p>
           </div>

@@ -1,8 +1,7 @@
+"use server";
 import { SendVerificationRequestParams } from "next-auth/providers/email";
 import { resend } from "./resend";
 import { VerificationEmail } from "./verificationEmail";
-
-import { render } from "@jsx-email/render";
 
 export const sendVerificationRequest = async (
   params: SendVerificationRequestParams
