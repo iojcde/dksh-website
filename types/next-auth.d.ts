@@ -15,8 +15,8 @@ declare module "next-auth" {
   }
   interface User extends Omit<DefaultUser, "id"> {
     id: number;
-    grade?: number;
-    class?: number;
+    grade: number | null;
+    class: number | null;
   }
 
   interface Profile extends Profile {
