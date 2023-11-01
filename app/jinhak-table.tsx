@@ -1,9 +1,9 @@
 export const JinhakTable = () => (
   <div
     className="hide-scrollbar prose overflow-x-scroll prose-sm prose-td:inline-flex prose-td:whitespace-nowrap
-   prose-td:border-slate-700 prose-td:border-r last:prose-td:border-r-0
+   prose-td:border-slate-700 prose-slate prose-td:border-r last:prose-td:border-r-0
     prose-tr:grid prose-tr:grid-cols-6 prose-td:justify-between dark:prose-invert
-     prose-tr:border-0 max-w-none px-8 py-4 pt-0 sm:pt-4  first:prose-td:font-semibold xl:prose-base"
+     prose-tr:border-0 max-w-none px-8 py-6 pt-0 sm:pt-2  first:prose-td:font-semibold xl:prose-base"
   >
     <table className="my-0 border-collapse mt-1 min-w-[30rem]">
       <tbody>

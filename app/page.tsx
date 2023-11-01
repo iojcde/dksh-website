@@ -230,7 +230,7 @@ export default async function Home() {
                   <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
                 </div>
               </div>
-              <h3 className="text-sm sm:text-center px-8 mt-4 text-white">
+              <h3 className="text-sm sm:text-center px-8 mt-4 font-semibold tracking-wide text-slate-100">
                 2023학년도 단대소고 졸업생 대학교 합격 정보
               </h3>
               <JinhakTable />
