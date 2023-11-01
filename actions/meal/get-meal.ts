@@ -13,7 +13,7 @@ export const getMeal = async (): Promise<{
   };
 
   const res = await fetch("https://dankook.sen.hs.kr/175819/subMenu.do", {
-    body: "viewType=list&siteId=SEI_00001178&pageIndex=2&arrMlsvId=0&srhMlsvYear=2023&srhMlsvMonth=10",
+    body: "viewType=list&siteId=SEI_00001178&pageIndex=1&arrMlsvId=0&srhMlsvYear=2023&srhMlsvMonth=11",
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",

@@ -1,4 +1,3 @@
-import "./jumbo.css";
 import QuickMenu from "@/components/home/quick-menu";
 import { Suspense } from "react";
 import {
@@ -38,7 +37,7 @@ export default async function Home() {
               <span className="font-semibold uppercase">New</span> 와우
             </div> */}
 
-            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl  lg:text-8xl xl:text-[7rem] bg-clip-text bg-gradient-to-br from-white via-white to-gray-1 text-transparent ">
+            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl sm:text-7xl  lg:text-8xl xl:text-[7rem] bg-clip-text bg-gradient-to-br from-white via-white to-gray-1 text-transparent ">
               단대소고
             </h1>
             <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
@@ -124,7 +123,9 @@ export default async function Home() {
             단대소고만의 장점
           </span>
 
-          <h1 className="font-extrabold text-5xl mt-4">이래서 단대소고다!</h1>
+          <h1 className="font-extrabold text-4xl lg:text-5xl mt-4">
+            이래서 단대소고다!
+          </h1>
           <p className=" mt-4 max-w-[50ch] mx-auto">
             <Balancer>
               단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
@@ -133,7 +134,7 @@ export default async function Home() {
           </p>
         </div>
         <div className="hide-scrollbar h-56 sm:h-auto w-full container overflow-auto flex snap-x snap-mandatory sm:grid mt-12 items-stretch max-w-5xl gap-4 sm:grid-cols-[1fr_0.19fr_1fr]">
-          <div className="min-w-full snap-center border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg sm:col-span-2">
+          <div className="min-w-full snap-center border border-gray-4  p-6 rounded-lg sm:col-span-2">
             <span className="flex items-center gap-2">
               <Cpu className="stroke-dksh-400" />
               <h2 className="text-xl tracking-tight font-bold">
@@ -147,7 +148,7 @@ export default async function Home() {
               교육을 받을 수 있습니다.
             </p>
           </div>
-          <div className="min-w-full snap-center border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg">
+          <div className="min-w-full snap-center border border-gray-4  p-6 rounded-lg">
             <span className="flex items-center gap-2">
               <Library className="stroke-violet-600" />
               <h2 className="text-xl tracking-tight  font-bold">
@@ -159,7 +160,7 @@ export default async function Home() {
               진로를 위해 교사들은 끊임없이 노력하고 있습니다.
             </p>
           </div>
-          <div className="min-w-full snap-center border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg">
+          <div className="min-w-full snap-center border border-gray-4  p-6 rounded-lg">
             <span className="flex items-center gap-2">
               <School className="stroke-pink-500" />
               <h2 className="text-xl tracking-tight font-bold">최고의 시설</h2>
@@ -170,7 +171,7 @@ export default async function Home() {
               사용할 수 있습니다.
             </p>
           </div>
-          <div className="min-w-full snap-center border border-gray-4 bg-gradient-to-br from-white via-gray-1 to-gray-2 p-6 rounded-lg sm:col-span-2">
+          <div className="min-w-full snap-center border border-gray-4  p-6 rounded-lg sm:col-span-2">
             <span className="flex items-center gap-2">
               <Users2 className=" stroke-sky-500" />
               <h2 className="text-xl tracking-tight font-bold">
@@ -189,40 +190,39 @@ export default async function Home() {
         <div className="mx-auto mt-6 h-1 w-52 rounded-full bg-gradient-to-r from-transparent to-dksh-400 sm:hidden"></div>
       </div>
 
-      <section className="py-24">
-        <div className="pb-6">
-          <div className="container">
-            <span className="text-indigo-500 pl-1 font-bold tracking-wide">
-              교육과정
-            </span>
-            <h1 className="text-5xl font-extrabold mt-4">
-              대학 진학 중심 교육
-            </h1>
+      <section className="py-20">
+        <div className="container">
+          <span className="text-indigo-500 pl-1 font-bold tracking-wide">
+            교육과정
+          </span>
+          <h1 className="text-4xl lg:text-5xl font-extrabold mt-4">
+            대학 진학 중심 교육
+          </h1>
 
-            <p className="text-gray-11 max-w-[60ch] mt-6 ">
-              단대소고는 대학 중심 다른 특성화고와 달리 국어, 영어, 수학과 같은
-              주요 과목과 전문 교과를 동일한 비율로 배우게 됩니다.
-            </p>
+          <p className="text-gray-11 max-w-[60ch] mt-6 ">
+            단대소고는 대학 중심 다른 특성화고와 달리 국어, 영어, 수학과 같은
+            주요 과목과 전문 교과를 동일한 비율로 배우게 됩니다.
+          </p>
 
-            <Link
-              href="/about/departments"
-              className="inline-flex items-center bg-indigo-50 hover:bg-indigo-200 focus:ring-indigo-600 focus:outline-none focus:ring-2 text-indigo-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
-            >
-              더 알아보기 <ChevronRight size={16} />
-            </Link>
-          </div>
+          <Link
+            href="/about/departments"
+            className="inline-flex items-center bg-indigo-50 hover:bg-indigo-200 focus:ring-indigo-600 focus:outline-none focus:ring-2 text-indigo-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
+          >
+            더 알아보기 <ChevronRight size={16} />
+          </Link>
         </div>
-        <div className="pb-20 relative">
-          <div className="absolute  -z-10 inset-0 overflow-hidden ">
-            <div className="absolute  jumbo -inset-[10px] opacity-20 z-0 xl:top-8" />
-            <div className="absolute inset-0 opacity-80 bg-grid [mask-image:linear-gradient(0deg,transparent,black)] z-20 xl:top-8" />
+        <div className="pb-20 relative pt-10 xl:pt-0 mt-10">
+          <div className="absolute  -z-10 inset-0 overflow-hidden  xl:top-8">
+            <Image src="/jumbo.png" fill alt="" />
+            <div className="absolute inset-0 opacity-80 bg-grid [mask-image:linear-gradient(0deg,transparent,black)] z-20" />
           </div>
-          <div className="container lg:grid lg:grid-cols-7 lg:gap-8 ">
+
+          <div className="container lg:grid lg:grid-cols-7 grid grid-cols-1 gap-4 lg:gap-8 ">
             <div className="bg-white lg:col-span-3 my-auto lg:mt-[4.5rem] rounded-xl shadow-xl  p-8 border">
               <CollegeLogos />
             </div>
 
-            <div className="rounded-2xl lg:col-span-4 bg-slate-900 shadow-2xl w-full relative overflow-clip h-full border border-slate-700 dark">
+            <div className="-mx-6 sm:mx-0 sm:rounded-2xl lg:col-span-4 bg-slate-900 shadow-2xl relative overflow-clip h-full border border-slate-700 dark">
               <div className="flex-none border-b border-slate-700">
                 <div className="flex items-center h-8 space-x-1.5 px-3">
                   <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
@@ -230,19 +230,22 @@ export default async function Home() {
                   <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
                 </div>
               </div>
+              <h3 className="text-sm sm:text-center px-8 mt-4 text-white">
+                2023학년도 단대소고 졸업생 대학교 합격 정보
+              </h3>
               <JinhakTable />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-20">
         <div className="pb-10">
           <div className="container">
             <span className="text-violet-500 pl-1  font-bold tracking-wide">
               세부 전공 소개
             </span>
-            <h1 className="text-5xl font-extrabold mt-4">
+            <h1 className="text-4xl lg:text-5xl font-extrabold mt-4">
               각 분야에 특화된 학과
             </h1>
 
@@ -254,7 +257,7 @@ export default async function Home() {
 
             <Link
               href="/about/departments"
-              className="inline-flex items-center bg-violet-100 hover:bg-violet-200 focus:ring-violet-600 focus:outline-none focus:ring-2 text-violet-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
+              className="inline-flex items-center bg-violet-50 hover:bg-violet-200 focus:ring-violet-600 focus:outline-none focus:ring-2 text-violet-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
             >
               더 알아보기 <ChevronRight size={16} />
             </Link>
@@ -262,7 +265,7 @@ export default async function Home() {
         </div>
         <div className=" pt-8 pb-24  relative">
           <div className="absolute  -z-10 inset-0 overflow-hidden">
-            <div className="absolute  jumbo -inset-[10px] opacity-20 z-0"></div>
+            <Image src="/jumbo.png" fill alt="" />
             <div className="absolute inset-0 opacity-80 bg-grid [mask-image:linear-gradient(0deg,transparent,black)] z-20" />
           </div>
 
@@ -327,7 +330,7 @@ export default async function Home() {
             <h1 className="text-4xl font-extrabold">오시는 길</h1>
             <p className=" text-gray-11 mt-8">
               단대소고는 교육 1번지 강남구 대치동의 중심에 위치해 있습니다.
-              한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학이 유리합니다.
+              한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학에 용이합니다.
             </p>
             <h2 className="font-bold mt-8">세부 주소</h2>
             <p className="mt-2 text-gray-11">

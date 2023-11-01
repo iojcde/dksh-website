@@ -1,7 +1,11 @@
 export const JinhakTable = () => (
-  <div className=" prose prose-sm prose-td:flex prose-td:border-slate-700 prose-td:border-r last:prose-td:border-r-0 prose-tr:grid prose-tr:grid-cols-6 prose-td:justify-between dark:prose-invert prose-tr:border-0 max-w-none px-8 py-4   first:prose-td:font-semibold xl:prose-base">
-    <span className="text-sm text-center">2023학년도 단대소고 졸업생 대학교 합격 정보</span>
-    <table className="my-0 border-collapse mt-1">
+  <div
+    className="hide-scrollbar prose overflow-x-scroll prose-sm prose-td:inline-flex prose-td:whitespace-nowrap
+   prose-td:border-slate-700 prose-td:border-r last:prose-td:border-r-0
+    prose-tr:grid prose-tr:grid-cols-6 prose-td:justify-between dark:prose-invert
+     prose-tr:border-0 max-w-none px-8 py-4 pt-0 sm:pt-4  first:prose-td:font-semibold xl:prose-base"
+  >
+    <table className="my-0 border-collapse mt-1 min-w-[30rem]">
       <tbody>
         <tr>
           <td>
