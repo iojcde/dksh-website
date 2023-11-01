@@ -126,7 +126,7 @@ export default async function Home() {
           <h1 className="font-extrabold text-4xl lg:text-5xl mt-4">
             이래서 단대소고다!
           </h1>
-          <p className=" mt-4 max-w-[50ch] mx-auto">
+          <p className=" mt-4 max-w-[50ch] mx-auto break-keep">
             <Balancer>
               단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
               소프트웨어 분야에 특화된 교육과정으로 학생들의 미래를 준비합니다.
@@ -199,7 +199,7 @@ export default async function Home() {
             대학 진학 중심 교육
           </h1>
 
-          <p className="text-gray-11 max-w-[60ch] mt-6 ">
+          <p className="text-gray-11 mt-6 break-keep">
             단대소고는 대학 중심 다른 특성화고와 달리 국어, 영어, 수학과 같은
             주요 과목과 전문 교과를 동일한 비율로 배우게 됩니다.
           </p>
@@ -230,7 +230,7 @@ export default async function Home() {
                   <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
                 </div>
               </div>
-              <h3 className="text-sm sm:text-center px-8 mt-4 font-semibold tracking-wide text-slate-100">
+              <h3 className="text-sm sm:text-center px-6 sm:px-8 mt-4 font-semibold tracking-wide text-slate-100">
                 2023학년도 단대소고 졸업생 대학교 합격 정보
               </h3>
               <JinhakTable />
@@ -249,7 +249,7 @@ export default async function Home() {
               각 분야에 특화된 학과
             </h1>
 
-            <p className="text-gray-11 max-w-[58ch] mt-6 ">
+            <p className="text-gray-11 mt-6 ">
               단대소고는 소프트웨어 전문 고등학교로써 소프트웨어 분야에 특화된
               교육과정으로 학생들의 미래를 준비합니다. 학생들은 2학년부터 원하는
               학과를 선택하여 심화된 교육을 받을 수 있습니다.
@@ -277,7 +277,7 @@ export default async function Home() {
               <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
                 AI SOFTWARE
               </h2>
-              <p className="mt-2">
+              <p className="mt-2 break-keep">
                 4차 산업혁명과 함께 산업 전 분야에서 AI 응용 기술에 대한 수요가
                 급격히 증가함에 따라, 데이터 과학 기초 교육, 기초 AI 원리 교육
                 및 응용실습을 통한 융·복합 인재 양성을 목표로 하고 있습니다.
@@ -291,7 +291,7 @@ export default async function Home() {
               <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
                 IoT SOFTWARE
               </h2>
-              <p className="mt-2">
+              <p className="mt-2 break-keep">
                 지능화된 사물들과 인터넷을 통해 새로운 서비스와 효용이 창출될 수
                 있도록 기초 기술에서 응용 기술까지 이론과 실무 능력을 고루 갖춘
                 수준 높은 엔지니어를 양성하는 학과입니다.
@@ -304,7 +304,7 @@ export default async function Home() {
               <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
                 GAME SOFTWARE
               </h2>
-              <p className="mt-2">
+              <p className="mt-2 break-keep">
                 21세기 문화 산업의 중심이 되고 있는 게임 산업의 주역이 되는 게임
                 개발자가 되기 위해 게임 컨텐츠과에서 배우는 모든 과정은 창조하고
                 도전하는 현장맞춤형 실무능력을 보유한 인재 양성을 목표로 합니다.
@@ -345,7 +345,7 @@ export default async function Home() {
         <span className="text-dksh-500 text-sm font-bold tracking-wide">
           SLOGAN
         </span>
-        <h2 className="font-extrabold tracking-wide bg-clip-text bg-gradient-to-br from-black to-dksh-500 text-transparent text-5xl max-w-[10ch] sm:max-w-none  leading-[1.2] lg:text-6xl mt-2">
+        <h2 className="font-extrabold break-keep tracking-wide bg-clip-text bg-gradient-to-br from-black to-dksh-500 text-transparent text-5xl max-w-[10ch] sm:max-w-none  leading-[1.2] lg:text-6xl mt-2">
           탁월함을 넘어 감동으로!
         </h2>
         <p className="text-gray-11 mt-8 max-w-prose">
@@ -359,4 +359,6 @@ export default async function Home() {
 
 export const metadata = {
   title: "단국대학교부속소프트웨어고등학교",
+  description:
+    "강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는 수도권 유일 소프트웨어 고등학교입니다.",
 };

@@ -9,6 +9,7 @@
 
   * {
     @apply border-border dark:border-gray-5;
+    
   }
   html {
     scrollbar-gutter: stable;
