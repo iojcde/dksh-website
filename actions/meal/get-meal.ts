@@ -70,7 +70,7 @@ export const getMeal = async (): Promise<{
 
       const img = popupDocument.querySelector("img")?.getAttribute("src");
 
-      if (img) {
+      if (img && !img.includes("btn_popClose.gif")) {
         dish.img = "https://dankook.sen.hs.kr" + img;
       }
     }

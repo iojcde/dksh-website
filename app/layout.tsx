@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Providers from "./providers";
 import { cn } from "@/lib/utils";
- 
+
 const pretendard = localFont({
   src: "../fonts/woff2/PretendardVariable.woff2",
   display: "swap",
@@ -24,14 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(pretendard.className)}>
-        <div id="container">
-          <Providers>
-            <Nav />
-             {children}
-            <Footer />
-          </Providers>
-        </div>
+      <body className={cn(pretendard.className, "min-h-screen flex flex-col")}>
+        <Providers>
+          <Nav />
+          <div className="grow">{children}</div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

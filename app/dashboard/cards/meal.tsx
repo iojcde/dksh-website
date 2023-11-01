@@ -27,8 +27,8 @@ export const MealCard = async () => {
           급식
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex gap-8 items-start">
-        <p className=" leading-8 text-lg font-medium">
+      <CardContent className="flex gap-6 items-start">
+        <p className=" leading-8 text-lg whitespace-nowrap font-medium">
           {typeof meal === "string"
             ? meal
             : meal?.map((d) => (
@@ -45,6 +45,12 @@ export const MealCard = async () => {
             src={img}
             alt=""
           />
+        )}
+
+        {!img && (
+          <div className="rounded-md w-48 overflow-clip bg-gray-3 flex items-center shadow-inner h-32 text-gray-11 p-4 text-sm">
+            급식 이미지가 등록되지 않았습니다.
+          </div>
         )}
       </CardContent>
     </Card>

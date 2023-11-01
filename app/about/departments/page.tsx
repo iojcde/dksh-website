@@ -32,6 +32,10 @@ const DepartmentsPage = () => (
       <TabsContent value="iot" className="prose  p-6">
         <IoT />
       </TabsContent>
+
+      <TabsContent value="game" className="prose p-6">
+        <Game />
+      </TabsContent>
     </Tabs>
   </div>
 );

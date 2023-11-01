@@ -1,4 +1,4 @@
-import Outline from "@/components/home/outline";
+import "./jumbo.css";
 import QuickMenu from "@/components/home/quick-menu";
 import { Suspense } from "react";
 import {
@@ -19,6 +19,9 @@ import Balancer from "react-wrap-balancer";
 import { Details } from "./details";
 import dynamic from "next/dynamic";
 import { AmbientLight } from "./ambient-light";
+import { JinhakTable } from "./jinhak-table";
+import { CollegeLogos } from "./college-logos";
+
 const Ohjangwon = dynamic(() => import("./ohjangwon"));
 
 export default async function Home() {
@@ -100,7 +103,7 @@ export default async function Home() {
               소프트웨어 전문 특성화고등학교입니다.
             </p>
             <p className="text-dksh-800 max-w-[45ch]  mt-4">
-              학생들이 소프트웨어, AI 등을 기반으로 대학에 진학할 수 있도록
+              학생들이 자신의 적성을 찾고 역량을 강화해 대학에 진학할 수 있도록
               전문적인 교사진을 구성해 진로 지도에 힘써오고 있습니다.
             </p>
           </div>
@@ -115,13 +118,13 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className=" py-24  text-sm">
+      <div className=" py-24 relative text-sm">
         <div className="lg:px-8 container max-w-6xl text-center mx-auto">
-          <span className="text-dksh-500 font-semibold mt-8">
+          <span className="text-pink-500 font-semibold mt-8">
             단대소고만의 장점
           </span>
 
-          <h1 className="font-extrabold text-4xl mt-4">이래서 단대소고다!</h1>
+          <h1 className="font-extrabold text-5xl mt-4">이래서 단대소고다!</h1>
           <p className=" mt-4 max-w-[50ch] mx-auto">
             <Balancer>
               단국대학교부속소프트웨어고등학교는 소프트웨어 전문 고등학교로써
@@ -185,83 +188,143 @@ export default async function Home() {
         </div>
         <div className="mx-auto mt-6 h-1 w-52 rounded-full bg-gradient-to-r from-transparent to-dksh-400 sm:hidden"></div>
       </div>
-      <div className="container py-24">
-        <div className=" xl:px-8">
-          <span className="text-dksh-500 pl-1 text-sm font-bold tracking-wide">
-            DEPARTMENTS
-          </span>
-          <h1 className="text-4xl font-extrabold mt-2">세부 전공 소개</h1>
 
-          <p className="text-gray-11 text-sm max-w-lg mt-4 ">
-            단대소고는 소프트웨어 전문 고등학교로써 소프트웨어 분야에 특화된
-            교육과정으로 학생들의 미래를 준비합니다. 학생들은 2학년부터 원하는
-            학과를 선택하여 심화된 교육을 받을 수 있습니다.
-          </p>
+      <section className="py-24">
+        <div className="pb-6">
+          <div className="container">
+            <span className="text-indigo-500 pl-1 font-bold tracking-wide">
+              교육과정
+            </span>
+            <h1 className="text-5xl font-extrabold mt-4">
+              대학 진학 중심 교육
+            </h1>
 
-          <Link
-            href="/about/departments"
-            className="flex items-center gap-2 px-2 mt-4 text-dksh-900 font-bold"
-          >
-            더 알아보기 <ChevronRight size={16} />
-          </Link>
-        </div>
-        <hr className="my-5 shadow" />
-        <div className=" grid xl:grid-cols-3 mt-2  mx-auto gap-12 text-sm text-gray-11 justify-center place-items-center">
-          <div className="sm:max-w-xs">
-            <div className="bg-pink-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
-              <BrainCircuit />
-            </div>
-            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
-              AI SOFTWARE
-            </h2>
-            <p className="mt-2">
-              4차 산업혁명과 함께 산업 전 분야에서 AI 응용 기술에 대한 수요가
-              급격히 증가함에 따라, 데이터 과학 기초 교육, 기초 AI 원리 교육 및
-              응용실습을 통한 융·복합 인재 양성을 목표로 하고 있습니다.
+            <p className="text-gray-11 max-w-[60ch] mt-6 ">
+              단대소고는 대학 중심 다른 특성화고와 달리 국어, 영어, 수학과 같은
+              주요 과목과 전문 교과를 동일한 비율로 배우게 됩니다.
             </p>
-          </div>
-          <div className="sm:max-w-xs">
-            <div className="bg-dksh-400 text-white h-10 w-10 rounded-full  flex items-center justify-center">
-              <Router />
-            </div>
 
-            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
-              IoT SOFTWARE
-            </h2>
-            <p className="mt-2">
-              지능화된 사물들과 인터넷을 통해 새로운 서비스와 효용이 창출될 수
-              있도록 기초 기술에서 응용 기술까지 이론과 실무 능력을 고루 갖춘
-              수준 높은 엔지니어를 양성하는 학과입니다.
-            </p>
-          </div>
-          <div className="sm:max-w-xs">
-            <div className="bg-violet-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
-              <Gamepad />
-            </div>
-            <h2 className="text-xl mt-2 font-semibold tracking-wide text-gray-12">
-              GAME SOFTWARE
-            </h2>
-            <p className="mt-2">
-              21세기 문화 산업의 중심이 되고 있는 게임 산업의 주역이 되는 게임
-              개발자가 되기 위해 게임 컨텐츠과에서 배우는 모든 과정은 창조하고
-              도전하는 현장맞춤형 실무능력을 보유한 인재 양성을 목표로 합니다.
-            </p>
+            <Link
+              href="/about/departments"
+              className="inline-flex items-center bg-indigo-50 hover:bg-indigo-200 focus:ring-indigo-600 focus:outline-none focus:ring-2 text-indigo-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
+            >
+              더 알아보기 <ChevronRight size={16} />
+            </Link>
           </div>
         </div>
-      </div>
+        <div className="pb-20 relative">
+          <div className="absolute  -z-10 inset-0 overflow-hidden ">
+            <div className="absolute  jumbo -inset-[10px] opacity-20 z-0 xl:top-8" />
+            <div className="absolute inset-0 opacity-80 bg-grid [mask-image:linear-gradient(0deg,transparent,black)] z-20 xl:top-8" />
+          </div>
+          <div className="container lg:grid lg:grid-cols-7 lg:gap-8 ">
+            <div className="bg-white lg:col-span-3 my-auto lg:mt-[4.5rem] rounded-xl shadow-xl  p-8 border">
+              <CollegeLogos />
+            </div>
+
+            <div className="rounded-2xl lg:col-span-4 bg-slate-900 shadow-2xl w-full relative overflow-clip h-full border border-slate-700 dark">
+              <div className="flex-none border-b border-slate-700">
+                <div className="flex items-center h-8 space-x-1.5 px-3">
+                  <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
+                  <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
+                  <div className="w-2.5 h-2.5 bg-slate-600 rounded-full" />
+                </div>
+              </div>
+              <JinhakTable />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="pb-10">
+          <div className="container">
+            <span className="text-violet-500 pl-1  font-bold tracking-wide">
+              세부 전공 소개
+            </span>
+            <h1 className="text-5xl font-extrabold mt-4">
+              각 분야에 특화된 학과
+            </h1>
+
+            <p className="text-gray-11 max-w-[58ch] mt-6 ">
+              단대소고는 소프트웨어 전문 고등학교로써 소프트웨어 분야에 특화된
+              교육과정으로 학생들의 미래를 준비합니다. 학생들은 2학년부터 원하는
+              학과를 선택하여 심화된 교육을 받을 수 있습니다.
+            </p>
+
+            <Link
+              href="/about/departments"
+              className="inline-flex items-center bg-violet-100 hover:bg-violet-200 focus:ring-violet-600 focus:outline-none focus:ring-2 text-violet-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
+            >
+              더 알아보기 <ChevronRight size={16} />
+            </Link>
+          </div>
+        </div>
+        <div className=" pt-8 pb-24  relative">
+          <div className="absolute  -z-10 inset-0 overflow-hidden">
+            <div className="absolute  jumbo -inset-[10px] opacity-20 z-0"></div>
+            <div className="absolute inset-0 opacity-80 bg-grid [mask-image:linear-gradient(0deg,transparent,black)] z-20" />
+          </div>
+
+          <div className="container max-w-[88rem] grid xl:grid-cols-3 mt-2  gap-12 text-sm text-gray-11 justify-center  place-items-center sm:place-items-stretch">
+            <div className="ring-1 ring-gray-4 rounded-lg px-8 py-6 bg-white shadow-lg">
+              <div className="bg-pink-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+                <BrainCircuit />
+              </div>
+              <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
+                AI SOFTWARE
+              </h2>
+              <p className="mt-2">
+                4차 산업혁명과 함께 산업 전 분야에서 AI 응용 기술에 대한 수요가
+                급격히 증가함에 따라, 데이터 과학 기초 교육, 기초 AI 원리 교육
+                및 응용실습을 통한 융·복합 인재 양성을 목표로 하고 있습니다.
+              </p>
+            </div>
+            <div className="ring-1 ring-gray-4 rounded-lg px-8 py-6 bg-white shadow-lg">
+              <div className="bg-dksh-400 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+                <Router />
+              </div>
+
+              <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
+                IoT SOFTWARE
+              </h2>
+              <p className="mt-2">
+                지능화된 사물들과 인터넷을 통해 새로운 서비스와 효용이 창출될 수
+                있도록 기초 기술에서 응용 기술까지 이론과 실무 능력을 고루 갖춘
+                수준 높은 엔지니어를 양성하는 학과입니다.
+              </p>
+            </div>
+            <div className="ring-1 ring-gray-4 rounded-lg px-8 py-6 bg-white shadow-lg">
+              <div className="bg-violet-500 text-white h-10 w-10 rounded-full  flex items-center justify-center">
+                <Gamepad />
+              </div>
+              <h2 className="text-xl mt-2 font-bold tracking-wide text-gray-12">
+                GAME SOFTWARE
+              </h2>
+              <p className="mt-2">
+                21세기 문화 산업의 중심이 되고 있는 게임 산업의 주역이 되는 게임
+                개발자가 되기 위해 게임 컨텐츠과에서 배우는 모든 과정은 창조하고
+                도전하는 현장맞춤형 실무능력을 보유한 인재 양성을 목표로 합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="container py-24">
         <div className="flex items-center justify-center flex-wrap gap-8">
-          <div className=" max-w-xl overflow-hidden rounded-xl w-full  z-10 shadow-md border">
+          <div className=" max-w-xl overflow-hidden rounded-xl bg-white w-full relative p-4 z-10 shadow-md border">
             <Image
-              className="hover:scale-105 transition duration-300"
               alt="단대소고 위치"
               src="/map.png"
               width={1140}
               height={789}
             />
+            <div className="absolute inset-x-0 inset-y-4 border-t border-b border-slate-100 pointer-events-none dark:border-slate-700"></div>
+            <div className="absolute inset-x-4 inset-y-0 border-l border-r border-slate-100 pointer-events-none dark:border-slate-700"></div>
           </div>
           <div className=" max-w-sm">
-            <h1 className="text-3xl font-extrabold">오시는 길</h1>
+            <h1 className="text-4xl font-extrabold">오시는 길</h1>
             <p className=" text-gray-11 mt-8">
               단대소고는 교육 1번지 강남구 대치동의 중심에 위치해 있습니다.
               한티역 3번 출구에서 도보 5분 거리에 위치해 있어 통학이 유리합니다.
