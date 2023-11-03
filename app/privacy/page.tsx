@@ -1,4 +1,4 @@
-const PrivacyContent: React.FC<{ small?: boolean }> = (small) => (
+const PrivacyContent = () => (
   <div id="content" className="container">
     <div className="prose max-w-none py-20">
       <div id="section_6">
