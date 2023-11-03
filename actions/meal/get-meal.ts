@@ -4,6 +4,8 @@ export const getMeal = async (): Promise<{
   meal: string[] | string;
   img: string | null;
 }> => {
+  console.log("RELOADING MEAL");
+
   let dish: {
     meal: string[] | string;
     img: string | null;

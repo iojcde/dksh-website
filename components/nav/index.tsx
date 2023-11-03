@@ -37,6 +37,23 @@ import {
 import React from "react";
 import UserSection from "./user-section";
 import { MobileNav } from "./mobile";
+
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
@@ -82,7 +99,7 @@ const Nav = () => {
             id="logo"
             href="/"
             className={cn(
-              path == "/" && "dark:invert invert-0  ",
+              path == "/" && "dark:invert invert-0  outline-none",
               "select-none logo"
             )}
           >
@@ -92,7 +109,7 @@ const Nav = () => {
               height={24}
               quality={100}
               alt=""
-            ></Image>
+            />
           </Link>
 
           <div className=" md:flex items-center gap-10 hidden ">
@@ -105,29 +122,22 @@ const Nav = () => {
                       <li className="row-span-5">
                         <NavigationMenuLink asChild>
                           <a
-                            className="h-full w-full relative overflow-hidden border-1 border-gray-12 bg-transparent flex select-none rounded-sm transition-colors duraiton-100 p-6 no-underline outline-none "
+                            className="h-full w-full bg-gradient-to-b from-transparent shadow-inner to-gray-3 dark:to-gray-8 relative overflow-hidden border-1 border-gray-12 bg-transparent flex select-none rounded-sm transition-colors duraiton-100 p-6 no-underline outline-none "
                             href="/"
                           >
-                            <Image
-                              src="/dksh.webp"
-                              fill
-                              className="brightness-[65%] object-cover object-right relative z-10"
-                              alt=""
-                            />
-                            <div className="absolute inset-0 backdrop-blur-[1px] rounded-sm bg-gray-12" />
-                            <div className=" relative z-20  w-full h-full flex flex-col justify-end">
+                            <div className="relative z-20  w-full h-full flex flex-col justify-end">
                               <Image
                                 alt=""
                                 src="/dksh-logo.png"
-                                className="w-12  invert object-contain object-left"
+                                className="w-12 dark:invert object-contain object-left"
                                 width={500}
                                 height={46}
                                 quality={100}
                               />
-                              <h2 className="mb-2 mt-4 text-xl font-extrabold text-white">
+                              <h2 className="mb-2 mt-4 text-xl font-extrabold text-gray-12 dark:text-white">
                                 학교 소개
                               </h2>
-                              <p className="text-sm leading-tight text-gray-300 font-normal">
+                              <p className="text-sm leading-tight dark:text-gray-300 font-normal">
                                 단대소고에 대해 알아보기
                               </p>
                             </div>
@@ -165,7 +175,9 @@ const Nav = () => {
 
                       <ul className="grid grid-cols-2 gap-1 px-3 text-gray-11 text-xs font-normal">
                         <li className="text-sm">
-                          <Link href="/">설립 및 창학 정신</Link>
+                          <Link href="/about/founding-spirit">
+                            설립 및 창학 정신
+                          </Link>
                         </li>{" "}
                         <li className="text-sm">
                           <Link href="/">교직원 조직도</Link>
@@ -174,7 +186,7 @@ const Nav = () => {
                           <Link href="/">교가</Link>
                         </li>
                         <li className="text-sm">
-                          <Link href="/">오시는 길</Link>
+                          <Link href="/#where">오시는 길</Link>
                         </li>
                       </ul>
                     </ul>

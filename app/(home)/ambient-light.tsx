@@ -38,7 +38,7 @@ export const AmbientLight = () => (
         radius="10"
         result="spread"
       />
-      <feGaussianBlur in="spread" stdDeviation="50" result="ambilight-light" />
+      <feGaussianBlur in="spread" stdDeviation="30" result="ambilight-light" />
 
       <feOffset in="SourceGraphic" result="source" />
 

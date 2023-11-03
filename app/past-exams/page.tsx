@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradeExams } from "./exams";
+import exams from "./exams.json";
 
 const PastExamsPage = () => {
   return (
@@ -24,63 +25,7 @@ function ExamsSection() {
         className="container prose prose-sm max-w-none mt-8"
       >
         <h2 className="text-2xl font-bold">1학년 기출문제</h2>
-        <GradeExams
-          grade={1}
-          data={{
-            "2023-1": {
-              midterm: [
-                {
-                  subject: "국어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-                {
-                  subject: "영어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-              ],
-              final: [
-                {
-                  subject: "국어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-                {
-                  subject: "영어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-              ],
-            },
-            "2023-2": {
-              midterm: [
-                {
-                  subject: "국어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-                {
-                  subject: "영어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-              ],
-              final: [
-                {
-                  subject: "국어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-                {
-                  subject: "영어",
-                  previewUrl: "",
-                  downloadUrl: "",
-                },
-              ],
-            },
-          }}
-        />
+        <GradeExams grade={1} data={exams} />
       </TabsContent>
       <TabsContent
         value="grade-2"

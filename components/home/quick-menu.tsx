@@ -1,8 +1,10 @@
 import { getMeal } from "@/actions/meal/get-meal";
-import { Suspense } from "react";
+import { cache } from "react";
 
 const QuickMenu = async () => {
-  const { meal } = await getMeal();
+  const cachedGetMeal = cache(getMeal);
+  const { meal } = await cachedGetMeal();
+
   return (
     <div className="quick-menu absolute bottom-0 z-20 inset-x-0 text-xs border-b border-gray-7 sm:text-sm text-gray-11">
       <div>
