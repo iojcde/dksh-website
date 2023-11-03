@@ -5478,7 +5478,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="left"
+                       
                       style={{
                         margin: 0,
                         textAlign: "left",
@@ -5499,7 +5499,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="left"
+                       
                       style={{
                         margin: 0,
                         textAlign: "left",
@@ -9959,7 +9959,7 @@ const PrivacyContent = () => (
               </span>
             </p>
             <span style={{ fontSize: 16 }}> </span>
-            <p align="left" style={{ margin: 0, textAlign: "left" }}>
+            <p   style={{ margin: 0, textAlign: "left" }}>
               <b>
                 <span style={{ lineHeight: "160%", fontSize: "13pt" }}>
                   <span style={{ fontFamily: "함초롬바탕" }}>
@@ -10050,7 +10050,7 @@ const PrivacyContent = () => (
               </span>
             </p>
             <span style={{ fontSize: 16 }}> </span>
-            <p align="left" style={{ margin: 0, textAlign: "left" }}>
+            <p   style={{ margin: 0, textAlign: "left" }}>
               <span
                 style={{
                   lineHeight: "160%",
@@ -10224,7 +10224,7 @@ const PrivacyContent = () => (
               </span>
             </p>
             <span style={{ fontSize: 16 }}> </span>
-            <p align="left" style={{ margin: 0, textAlign: "left" }}>
+            <p   style={{ margin: 0, textAlign: "left" }}>
               <span style={{ lineHeight: "160%", fontSize: "12pt" }}>
                 <span style={{ fontFamily: "함초롬바탕" }}>&nbsp;</span>
               </span>
