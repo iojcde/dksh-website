@@ -714,7 +714,7 @@ const PrivacyContent = () => (
                   colSpan={3}
                 >
                   <p
-                    align="center"
+                     
                     style={{ margin: "0px 0px 10px", textAlign: "center" }}
                   >
                     <span style={{ color: "black" }}>
@@ -724,7 +724,7 @@ const PrivacyContent = () => (
                     </span>
                   </p>
                   <p
-                    align="center"
+                     
                     style={{ margin: "0px 0px 10px", textAlign: "center" }}
                   >
                     <span style={{ fontSize: 13 }}>
@@ -791,7 +791,7 @@ const PrivacyContent = () => (
                   colSpan={2}
                 >
                   <p
-                    align="center"
+                     
                     style={{ margin: "0px 0px 10px", textAlign: "center" }}
                   >
                     <span style={{ color: "black" }}>
@@ -801,7 +801,7 @@ const PrivacyContent = () => (
                     </span>
                   </p>
                   <p
-                    align="center"
+                     
                     style={{ margin: "0px 0px 10px", textAlign: "center" }}
                   >
                     <span
@@ -1344,7 +1344,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span
@@ -1688,7 +1688,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ color: "black", fontSize: "9pt" }}>
@@ -2026,7 +2026,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ color: "black", fontSize: "9pt" }}>
@@ -2384,7 +2384,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span
@@ -2725,7 +2725,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -3079,7 +3079,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ color: "black", fontSize: "9pt" }}>
@@ -3234,7 +3234,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span
@@ -3427,7 +3427,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ color: "black", fontSize: "9pt" }}>
@@ -4387,7 +4387,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4428,7 +4428,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4469,7 +4469,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4510,7 +4510,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4525,7 +4525,7 @@ const PrivacyContent = () => (
                       </b>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4568,7 +4568,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4606,7 +4606,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4646,7 +4646,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4667,7 +4667,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4719,7 +4719,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4782,7 +4782,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4823,7 +4823,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4897,7 +4897,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4941,7 +4941,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -4962,7 +4962,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5014,7 +5014,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5077,7 +5077,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5099,7 +5099,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5141,7 +5141,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5215,7 +5215,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5236,7 +5236,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5293,7 +5293,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5314,7 +5314,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5355,7 +5355,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5396,7 +5396,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5437,7 +5437,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5540,7 +5540,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5596,7 +5596,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5636,7 +5636,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5676,7 +5676,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5716,7 +5716,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5757,7 +5757,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -5797,7 +5797,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -6138,7 +6138,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -6179,7 +6179,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -6215,7 +6215,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -6318,7 +6318,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -6341,7 +6341,7 @@ const PrivacyContent = () => (
                       </i>
                     </p>
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8214,7 +8214,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8250,7 +8250,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8286,7 +8286,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8322,7 +8322,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8358,7 +8358,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8395,7 +8395,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ background: "none", color: "windowtext" }}>
@@ -8428,7 +8428,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8465,7 +8465,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8502,7 +8502,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ background: "none", color: "windowtext" }}>
@@ -8565,7 +8565,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8602,7 +8602,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8639,7 +8639,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8676,7 +8676,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{ margin: 0, textAlign: "center" }}
                     >
                       <span style={{ background: "none", color: "windowtext" }}>
@@ -8838,7 +8838,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8874,7 +8874,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8910,7 +8910,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8946,7 +8946,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -8984,7 +8984,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9020,7 +9020,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9056,7 +9056,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9092,7 +9092,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9131,7 +9131,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9167,7 +9167,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9203,7 +9203,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -9239,7 +9239,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -10412,7 +10412,7 @@ const PrivacyContent = () => (
           <div style={{ padding: 0, border: "1px black", borderImage: "none" }}>
             <span style={{ fontSize: 16 }}> </span>
             <p
-              align="center"
+               
               style={{
                 margin: "0px 0px 1px",
                 textAlign: "center",
@@ -10910,7 +10910,7 @@ const PrivacyContent = () => (
             </p>
             <span style={{ fontSize: 16 }}> </span>
             <p
-              align="center"
+               
               style={{
                 margin: "0px 0px 0px 6px",
                 textAlign: "center",
@@ -10963,7 +10963,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -10999,7 +10999,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11033,7 +11033,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11069,7 +11069,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11119,7 +11119,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11169,7 +11169,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11211,7 +11211,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11250,7 +11250,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11300,7 +11300,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11395,7 +11395,7 @@ const PrivacyContent = () => (
             </p>
             <span style={{ fontSize: 16 }}> </span>
             <p
-              align="center"
+               
               style={{
                 margin: "0px 0px 0px 6px",
                 textAlign: "center",
@@ -11448,7 +11448,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11482,7 +11482,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11516,7 +11516,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11550,7 +11550,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11584,7 +11584,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11620,7 +11620,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11659,7 +11659,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11696,7 +11696,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11735,7 +11735,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11774,7 +11774,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11816,7 +11816,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11855,7 +11855,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11892,7 +11892,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11929,7 +11929,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -11966,7 +11966,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12027,7 +12027,7 @@ const PrivacyContent = () => (
             </p>
             <span style={{ fontSize: 16 }}> </span>
             <p
-              align="center"
+               
               style={{
                 margin: "0px 0px 0px 6px",
                 textAlign: "center",
@@ -12080,7 +12080,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12114,7 +12114,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12148,7 +12148,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12184,7 +12184,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12234,7 +12234,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12274,7 +12274,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 95px",
                         textAlign: "center",
@@ -12473,7 +12473,7 @@ const PrivacyContent = () => (
             </p>
             <span style={{ fontSize: 16 }}> </span>
             <p
-              align="center"
+               
               style={{
                 margin: "0px 0px 0px 6px",
                 textAlign: "center",
@@ -12527,7 +12527,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: "0px 0px 0px 6px",
                         textAlign: "center",
@@ -12561,7 +12561,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -12594,7 +12594,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -12629,7 +12629,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -12665,7 +12665,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
@@ -12701,7 +12701,7 @@ const PrivacyContent = () => (
                     }}
                   >
                     <p
-                      align="center"
+                       
                       style={{
                         margin: 0,
                         textAlign: "center",
