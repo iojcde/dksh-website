@@ -166,6 +166,13 @@ export const Controls = () => {
       };
     });
 
+    (
+      document.querySelector(".dot-inner:first-child") as HTMLElement
+    ).onanimationstart = () => {
+      const vid = document.querySelector(".video1") as HTMLVideoElement;
+      vid.play();
+    };
+
     document
       .querySelectorAll(".outline-section .section")
       .forEach((s, index) => {
@@ -197,7 +204,7 @@ export const Controls = () => {
   };
 
   return (
-    <div className="outline-control-container pointer-events-none absolute inset-0 flex my-8 justify-center items-end">
+    <div className="outline-control-container pointer-events-none absolute inset-0 z-20 flex my-8 justify-center items-end">
       <div className="outline-control-inner pointer-events-auto scale-0 translate-y-8 sticky bottom-8 h-14 w-14 rounded-full">
         <div className="relative">
           <div className="tabs  h-14 rounded-full bg-gray-4/70 backdrop-blur flex items-center">

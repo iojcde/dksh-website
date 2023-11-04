@@ -83,10 +83,12 @@ export default async function Home() {
         </Suspense> */}
       </main>
 
-      <section className="bg-gradient-to-br  relative shadow-inner from-white via-white to-dksh-25 ">
+      <Outline />
+
+      <section className="bg-gradient-to-br  relative mt-20 from-white via-white to-dksh-25 ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 container sm:pr-0">
-          <div className="py-24 sm:text-lg relative z-10">
-            <h1 className="text-2xl font-extrabold">소개</h1>
+          <div className="py-24 sm:text-lg relative z-10  bg-transparent">
+            <h1 className="text-3xl font-extrabold">소개</h1>
 
             <p className="text-dksh-800 mt-4">
               강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는
@@ -105,13 +107,11 @@ export default async function Home() {
               quality={100}
               alt=""
               src="/wow.png"
-              className="object-cover z-10  object-center select-none h-full "
+              className="object-cover z-10  object-top  select-none h-full "
             />
           </div>
         </div>
       </section>
-
-      <Outline />
 
       {/*       
       <section className=" py-24 relative text-sm">
