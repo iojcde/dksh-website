@@ -23,9 +23,10 @@ export default async function Home() {
         <Details />
         <div className="container grid h-full pt-16  grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 ">
           <div className="relative z-30 mt-8">
-            <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
-              <span className="font-semibold uppercase">New</span> 와우
-            </div>
+            {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
+              <span className="font-semibold uppercase">경축</span> 2023학년
+              졸업생 카이스트, 한국뉴욕대학교 합격
+            </div> */}
 
             <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl sm:text-7xl  lg:text-8xl xl:text-[7rem] bg-clip-text bg-gradient-to-br from-white via-white to-gray-1 text-transparent ">
               단대소고
@@ -77,9 +78,9 @@ export default async function Home() {
             />
           </div>
         </div>
-        <Suspense>
+        {/* <Suspense>
           <QuickMenu />
-        </Suspense>
+        </Suspense> */}
       </main>
 
       <section className="bg-gradient-to-br  relative shadow-inner from-white via-white to-dksh-25 ">
@@ -271,7 +272,7 @@ export default async function Home() {
           </h1>
 
           <p className="text-gray-11 mt-6 break-keep max-w-prose">
-            2023학년도 단대소고 졸업생 100명 중 84명이 대학에 합격했습니다.
+            2023학년도(1기) 단대소고 졸업생 100명 중 84명이 대학에 합격했습니다.
             서울대, 연세대, 고려대, 서강대, 성균관대, 한양대 등 서울 지역 주요
             6개 대학에 진학했고, 수도권 주요 대학에 79명의 합격생을
             배출했습니다.

@@ -72,8 +72,12 @@ const Nav = () => {
         endTrigger: "#container",
         scrub: true,
         end: "bottom top",
-        onToggle: () => {
-          document.getElementById("nav")?.classList.toggle("dark");
+        onToggle: (self) => {
+          if (!self.isActive) {
+            document.getElementById("nav")?.classList.add("dark");
+          } else {
+            document.getElementById("nav")?.classList.remove("dark");
+          }
         },
       },
     });

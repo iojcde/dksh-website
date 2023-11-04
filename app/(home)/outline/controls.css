@@ -1,0 +1,46 @@
+
+.dot-inner {
+  @apply h-2 rounded-full bg-gray-11 relative transition-[min-width] overflow-hidden;
+  transition-timing-function: cubic-bezier(0.33,0,0.67,1);
+  transition-duration:400ms;
+}
+
+
+.outline-section .dot-inner.active:after {
+  content: "";
+  width: 0;
+  height: 100%;
+  min-width: 15%;
+  margin-left: -15%;
+  border-radius: 10px; 
+  position: absolute;
+  top: 0;
+  left: 0; 
+  @apply bg-gray-12;
+  animation-name: progress;
+  animation-duration: 5.5s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  transition: background-color linear 250ms;
+}
+
+.outline-section.running .dot-inner.active:after {
+  animation-play-state: running;
+}
+
+.outline-section.paused .dot-inner.active:after {
+  animation-play-state: paused;
+ 
+}
+ 
+
+@keyframes progress{
+  0% {
+    width: 0;
+}
+
+100% {
+    width: 115%;
+}
+}
