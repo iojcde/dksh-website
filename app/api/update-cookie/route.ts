@@ -5,7 +5,7 @@ const GET = async () => {
 
   console.log(cookie);
 
-  return new Response(cookie);
+  return new Response(cookie?.split(";")[0]);
 };
 
 export { GET };
