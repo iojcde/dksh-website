@@ -8,7 +8,7 @@ export const lerp = (a: number, b: number, n: number) => {
   return a * (1 - n) + b * n;
 };
 
-export const bounds = (el) => {
+export const bounds = (el: HTMLElement) => {
   const bounds = el.getBoundingClientRect();
 
   return {
