@@ -4,35 +4,48 @@ import "./controls.css";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
+import { Draggable } from "gsap/Draggable";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useEffect, useState } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(CustomEase);
 
 export const Controls = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(CustomEase);
+    gsap.registerPlugin(Draggable);
+
+    const vid = document.querySelector(".video1") as HTMLVideoElement;
+
     new CustomEase("wow", "0.23, 1, 0.32, 1");
     new ScrollTrigger({
       trigger: ".outline-control-container",
       start: "top center",
       end: "bottom center",
       onEnter: (self) => {
+        vid.play();
+
         disappearTl.pause();
         appearTl.restart();
       },
       onLeaveBack: (self) => {
+        vid.pause();
         appearTl.pause();
         disappearTl.restart();
       },
       onLeave: () => {
+        vid.pause();
         appearTl.pause();
         disappearTl.restart();
       },
       onEnterBack: () => {
+        const vid = document.querySelector(".video1") as HTMLVideoElement;
+        vid.play();
+
         disappearTl.pause();
         appearTl.restart();
       },
@@ -177,7 +190,14 @@ export const Controls = () => {
       .querySelectorAll(".outline-section .section")
       .forEach((s, index) => {
         s.addEventListener("click", () => {
-          activateSection(index);
+          if (window.innerWidth < 1024) return;
+          setIsRunning((before) => !before);
+          document
+            .querySelector(".outline-section")
+            ?.classList.toggle("running");
+          document
+            .querySelector(".outline-section")
+            ?.classList.toggle("paused");
         });
       });
 
@@ -195,12 +215,24 @@ export const Controls = () => {
     const sections = document.querySelectorAll(".section");
     const section = sections[index] as HTMLElement;
 
-    gsap.to(".section-list", {
-      duration: 1,
+    if (window.innerWidth < 1024) {
+      gsap.to(".section-container", {
+        duration: 1,
+        // scrollLeft: -section.offsetLeft,
+        scrollTo: {
+          x: section.offsetLeft,
+        },
+        ease: "wow",
+      });
+    } else {
+      gsap.to(".section-container", {
+        duration: 1,
+        x: -section.offsetLeft,
+        ease: "wow",
+      });
+    }
 
-      x: -section.offsetLeft,
-      ease: "wow",
-    });
+    // if scroll snap has ended
   };
 
   return (
@@ -277,7 +309,7 @@ export const Controls = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="invisible dot text-black pause-button"
               >
-                <g clip-path="url(#clip0_27_83)">
+                <g clipPath="url(#clip0_27_83)">
                   <path
                     d="M1.03906 12.7266H2.82031C3.5 12.7266 3.85938 12.3672 3.85938 11.6797V1.03906C3.85938 0.328125 3.5 0 2.82031 0H1.03906C0.359375 0 0 0.359375 0 1.03906V11.6797C0 12.3672 0.359375 12.7266 1.03906 12.7266ZM6.71875 12.7266H8.49219C9.17969 12.7266 9.53125 12.3672 9.53125 11.6797V1.03906C9.53125 0.328125 9.17969 0 8.49219 0H6.71875C6.03125 0 5.67188 0.359375 5.67188 1.03906V11.6797C5.67188 12.3672 6.03125 12.7266 6.71875 12.7266Z"
                     fill="currentColor"

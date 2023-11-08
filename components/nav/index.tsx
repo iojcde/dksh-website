@@ -88,11 +88,10 @@ const Nav = () => {
   }, [path]);
 
   return (
-    <>
-      <nav
-        id="nav"
+    <nav id="nav" className=" sticky top-0  z-[100]">
+      <div
         className={cn(
-          "py-4 px-6 h-12 flex items-center  text-foreground justify-between sticky 2xl:px-12 top-0 text-sm font-medium w-full z-[100]",
+          "py-4 h-12 flex  container text-foreground justify-between  font-medium w-full",
           path == "/" ? "dark" : ""
         )}
       >
@@ -340,9 +339,9 @@ const Nav = () => {
             <Menu />
           </button>
         </div>
-      </nav>
+      </div>
       <MobileNav />
-    </>
+    </nav>
   );
 };
 export default Nav;

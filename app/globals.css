@@ -13,7 +13,7 @@
   }
   html {
     scrollbar-gutter: stable; 
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
 }
 
@@ -112,4 +112,8 @@ caption {
 
 :lang(ko){
   word-break: keep-all;
+}
+
+.lmao{
+  background: radial-gradient(ellipse 80% 50% at 50% -20%,hsla(208, 95%, 25%,0.4),hsla(0,0%,100%,0));
 }

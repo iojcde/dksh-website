@@ -18,44 +18,44 @@ export default async function Home() {
     <>
       <main
         id="hero"
-        className="-mt-12 bg-gradient-to-br flex items-center from-black to-dksh-900 dark text-gray-12 relative min-h-screen overflow-hidden  pb-24 justify-between w-full  h-full"
+        className="-mt-12 bg-gradient-tob bg-[#000212] dark flex items-center  text-gray-12 relative min-h-screen overflow-hidden  pb-24 justify-between w-full  h-full"
       >
-        <Details />
-        <div className="container grid h-full pt-16  grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-6 ">
-          <div className="relative z-30 mt-8">
-            {/* <div className="border select-none mb-2 border-dksh-600 bg-dksh-600 max-w-min whitespace-nowrap rounded-full px-2 py-1 text-xs">
-              <span className="font-semibold uppercase">경축</span> 2023학년
-              졸업생 카이스트, 한국뉴욕대학교 합격
-            </div> */}
+        <div className="inset-0 absolute lmao"></div>
 
-            <h1 className="hero-title font-extrabold -ml-[0.06em] mt-2 text-6xl sm:text-7xl  lg:text-8xl xl:text-[7rem] bg-clip-text bg-gradient-to-br from-white via-white to-gray-1 text-transparent ">
+        <div className="w-full container flex flex-col h-full pt-16  pb-8   text-center justify-center items-center gap-6 ">
+          <div className="relative z-30 mt-8">
+            <div className="select-none mb-8 max-w-min whitespace-nowrap mx-auto rounded-full px-4 py-1 text-xs text-gray-12 border bg-gray-12/10">
+              2023학년 졸업생 카이스트, 한국뉴욕주립대 합격
+            </div>
+
+            <h1 className="hero-title tracking-wide font-bold text-6xl sm:text-7xl  lg:text-8xl bg-clip-text bg-gradient-to-br from-gray-12 via-gray-12 to-gray-9 text-transparent ">
               단대소고
             </h1>
-            <p className="mt-4 text-gray-11 sm:text-lg  max-w-[48ch]">
+            <p className="mt-4 text-gray-11 sm:text-lg mx-auto max-w-[48ch] break-normal ">
               <Balancer>
                 강남구 대치동에 위치한 단국대학교부속소프트웨어고등학교는 수도권
                 유일 소프트웨어 고등학교입니다.
               </Balancer>
             </p>
-            <div className="mt-8 flex items-center gap-2">
+            <div className="mt-8 justify-center flex items-center gap-2">
               <Link
                 href="/about"
-                className=" inline-block select-none rounded-md  bg-gradient-to-br from-dksh-500 to-dksh-600  p-2 px-8 text-white  transition  text-sm hover:opacity-95 hover:shadow"
+                className=" inline-block select-none rounded-full bg-gradient-to-br from-indigo-500 to-dksh-500  p-2 px-8 text-white  text-sm transition hover:opacity-95 hover:shadow"
               >
                 더 알아보기
               </Link>
 
               <Link
                 href="/dashboard"
-                className="inline-block select-none rounded-md bg-gradient-to-br bg-gray-1 border border-gray-4 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
+                className="inline-block select-none rounded-full bg-gradient-to-br bg-gray-1 border border-gray-4 p-2 px-8 text-gray-12 transition  text-sm hover:opacity-95 hover:shadow"
               >
                 재학생 포털
               </Link>
             </div>
           </div>
 
-          <div className="w-full relative z-20 ">
-            <div className="promote-video ambilight relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
+          <div className="w-full relative max-w-2xl mt-8  z-20 ">
+            <div className="-mx-2 promote-video ambilight relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
                   className="absolute  top-0 left-0 w-full h-[calc(100%+1px)] inset-y-0  border-0 right-1"
@@ -69,18 +69,18 @@ export default async function Home() {
             <AmbientLight />
             <Ohjangwon />
 
-            <Image
+            {/* <Image
               alt=""
               src="/blob.png"
-              className="-top-[35%] scale-[105%] -rotate-45 blur-3xl inset-x-0 absolute xl:hidden"
+              className="-top-[35%] scale-[105%] -rotate-45 blur-3xl inset-x-0 absolute mx-auto"
               width={800}
               height={800}
-            />
+            /> */}
           </div>
         </div>
-        {/* <Suspense>
+        <Suspense>
           <QuickMenu />
-        </Suspense> */}
+        </Suspense>
       </main>
 
       <Outline />

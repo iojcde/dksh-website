@@ -44,3 +44,7 @@
     width: 115%;
 }
 }
+
+.outline-section .section {
+  @apply container
+}

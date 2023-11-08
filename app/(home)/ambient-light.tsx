@@ -11,9 +11,9 @@ export const AmbientLight = () => (
       <feOffset in="SourceGraphic" result="source-copy" />
 
       <feComponentTransfer in="source-copy" result="wow">
-        <feFuncR type="linear" slope="0.9" />
-        <feFuncG type="linear" slope="0.9" />
-        <feFuncB type="linear" slope="0.9" />
+        <feFuncR type="linear" slope="0.8" />
+        <feFuncG type="linear" slope="0.8" />
+        <feFuncB type="linear" slope="0.8" />
       </feComponentTransfer>
 
       <feColorMatrix
