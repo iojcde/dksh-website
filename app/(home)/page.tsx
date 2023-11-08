@@ -23,7 +23,7 @@ export default async function Home() {
         <div className="inset-0 absolute lmao"></div>
 
         <div className="w-full container flex flex-col h-full pt-16  pb-8   text-center justify-center items-center gap-6 ">
-          <div className="relative z-30 mt-8">
+          <div className="relative z-30 mt-12">
             <div className="select-none mb-8 max-w-min whitespace-nowrap mx-auto rounded-full px-4 py-1 text-xs text-gray-12 border bg-gray-12/10">
               2023학년 졸업생 카이스트, 한국뉴욕주립대 합격
             </div>
@@ -54,7 +54,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="w-full relative max-w-2xl mt-8  z-20 ">
+          <div className="w-full relative max-w-2xl mt-16  z-20 ">
             <div className="-mx-2 promote-video ambilight relative z-20 bg-gray-2  shadow-xl rounded-xl border-gray-5 border p-1 lg:rounded-2xl  ">
               <div className="overflow-hidden rounded-[8px] lg:rounded-xl aspect-video border border-gray-4 relative">
                 <iframe
@@ -280,7 +280,7 @@ export default async function Home() {
 
           <Link
             href="https://www.etnews.com/20230314000103"
-            target='_blank'
+            target="_blank"
             className="inline-flex items-center bg-indigo-50 hover:bg-indigo-200 focus:ring-indigo-600 focus:outline-none focus:ring-2 text-indigo-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
           >
             더 알아보기 <ChevronRight size={16} />

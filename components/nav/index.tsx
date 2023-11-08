@@ -69,7 +69,7 @@ const Nav = () => {
       scrollTrigger: {
         trigger: "#hero",
         start: "bottom top+=30px",
-        endTrigger: "#container",
+        endTrigger: "html",
         scrub: true,
         end: "bottom top",
         onToggle: (self) => {
@@ -88,11 +88,13 @@ const Nav = () => {
   }, [path]);
 
   return (
-    <nav id="nav" className=" sticky top-0  z-[100]">
+    <nav
+      id="nav"
+      className={cn(" sticky top-0 z-[100]", path == "/" ? "dark" : "")}
+    >
       <div
         className={cn(
-          "py-4 h-12 flex  container text-foreground justify-between  font-medium w-full",
-          path == "/" ? "dark" : ""
+          "py-4 h-12 flex  container text-foreground justify-between  font-medium w-full"
         )}
       >
         <div className={"bien-glass glass"} />
