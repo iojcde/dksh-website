@@ -279,7 +279,8 @@ export default async function Home() {
           </p>
 
           <Link
-            href="/about/departments"
+            href="https://www.etnews.com/20230314000103"
+            target='_blank'
             className="inline-flex items-center bg-indigo-50 hover:bg-indigo-200 focus:ring-indigo-600 focus:outline-none focus:ring-2 text-indigo-900 rounded-full gap-2 px-4 py-2 text-sm mt-8 text-dksh-900 font-bold"
           >
             더 알아보기 <ChevronRight size={16} />
